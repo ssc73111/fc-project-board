@@ -44,7 +44,7 @@ class JpaRepositoryTest {
     void givenTestData_whenInserting_thenWorksFine() {
         long previousCount = articleRepository.count();
 
-        Article saved = articleRepository.save(Article.of("new article", "new content", ""));
+        Article saved = articleRepository.save(Article.of("2 article", "2 content", ""));
 
         Assertions.assertThat(articleRepository.count())
                 .isEqualTo(previousCount + 1);

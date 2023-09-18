@@ -3,14 +3,8 @@ package com.fc.projectboard.domain;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.springframework.data.annotation.CreatedBy;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedBy;
-import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -23,9 +17,9 @@ import java.util.Set;
         @Index(columnList = "createdAt"),
         @Index(columnList = "createBy")
 }) // 위의 인덱스로 빠른 서칭 가능하도록 함.
-@EntityListeners(AuditingEntityListener.class)
+//@EntityListeners(AuditingEntityListener.class)
 @Entity
-public class Article {
+public class Article extends AuditingFields {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; // 자동으로 부여하는 값으로 사용자가 수정 하지 못하도록 한다. (JPA Persistence Context 가 영속화를 할때 자동으로 부여해주는 고유번호)
@@ -46,19 +40,19 @@ public class Article {
     @ToString.Exclude // cascade 결합도가 높기 때문에(양방향 바인딩), 운영시 키 설정 하지 않는다. (순환참조때문에, toString 을 모든 인스턴스에서 실행하기 때문에
     private final Set<ArticleComment> articleCommentSet = new LinkedHashSet<>();
 
-    // 메타데이터는 자동 세팅되므로 Setter 를 사용하지 않음.
-    @CreatedDate
-    @Column(nullable = false)
-    private LocalDateTime createdAt; // 생성일시
-    @CreatedBy
-    @Column(nullable = false, length = 100)
-    private String createBy; // 생성자
-    @LastModifiedDate
-    @Column(nullable = false)
-    private LocalDateTime modifiedAt; // 수정일시
-    @LastModifiedBy
-    @Column(nullable = false, length = 100)
-    private String modifiedBy; // 수정자
+//    // 메타데이터는 자동 세팅되므로 Setter 를 사용하지 않음.
+//    @CreatedDate
+//    @Column(nullable = false)
+//    private LocalDateTime createdAt; // 생성일시
+//    @CreatedBy
+//    @Column(nullable = false, length = 100)
+//    private String createBy; // 생성자
+//    @LastModifiedDate
+//    @Column(nullable = false)
+//    private LocalDateTime modifiedAt; // 수정일시
+//    @LastModifiedBy
+//    @Column(nullable = false, length = 100)
+//    private String modifiedBy; // 수정자
 
     protected Article() {
     }
