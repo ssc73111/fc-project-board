@@ -5,6 +5,7 @@ import lombok.Setter;
 import lombok.ToString;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -17,6 +18,7 @@ import java.util.Objects;
         @Index(columnList = "createdAt"),
         @Index(columnList = "createBy")
 }) // 위의 인덱스로 빠른 서칭 가능하도록 함.
+@EntityListeners(AuditingEntityListener.class)
 @Entity
 public class ArticleComment {
 
