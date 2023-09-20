@@ -34,7 +34,7 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     runtimeOnly 'com.h2database:h2'
-    runtimeOnly 'com.mysql:mysql-connector-java'
+    runtimeOnly 'com.mysql:mysql-connector-j'
 
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
     implementation 'org.springframework.data:spring-data-rest-hal-explorer' // API 를 테스트 할수 있게 해준다. EndPoint 접속을 하면 임의 API HAL Explorer 화면을 볼수 있다.
