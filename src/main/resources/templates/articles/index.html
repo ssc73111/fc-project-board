@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <title>게시판 페이지</title>
 </head>
 <body>
-<!--헤더-->
-<header>
-  header
-  <hr>
-</header>
+<!-- header elemental 을 찾아라, html 태그가 header 인 화면 찾아오기,
+ID 가 #header 인 것, 클래스 가 .header 인 것 -->
+<header th:replace="~{header :: header}"></header>
 <!--메인 - 테이블-->
 <main>
   <!--검색창-->
@@ -30,25 +28,31 @@
   <table>
     <thead>
     <tr>
-        <th>제목</th>
-        <th>해시태그</th>
-        <th>작성자</th>
-        <th>작성일</th>
+      <th>제목</th>
+      <th>해시태그</th>
+      <th>작성자</th>
+      <th>작성일</th>
     </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>첫글</td>
-        <td>#태그</td>
-        <td>유저</td>
-        <td>2023-09-21</td>
-      </tr>
-      <tr>
-        <td>2글</td>
-        <td>#태그</td>
-        <td>유저2</td>
-        <td>2023-09-21</td>
-      </tr>
+    <tr>
+      <td>첫글</td>
+      <td>#태그</td>
+      <td>유저</td>
+      <td>2023-09-21</td>
+    </tr>
+    <tr>
+      <td>2글</td>
+      <td>#태그</td>
+      <td>유저2</td>
+      <td>2023-09-21</td>
+    </tr>
+    <tr>
+      <td>3글</td>
+      <td>#태그</td>
+      <td>유저2</td>
+      <td>2023-09-21</td>
+    </tr>
     </tbody>
   </table>
   <!--  네비게이션바-->
@@ -66,9 +70,6 @@
   </nav>
 </main>
 <!--풋-->
-<footer>
-  <hr>
-  footer
-</footer>
+<footer th:replace="~{footer :: footer}"></footer>
 </body>
 </html>
