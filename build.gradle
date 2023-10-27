@@ -30,11 +30,15 @@ dependencies {
     implementation 'org.springframework.data:spring-data-rest-hal-explorer' // API 를 테스트 할수 있게 해준다. EndPoint 접속을 하면 임의 API HAL Explorer 화면을 볼수 있다.
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 
+//    implementation 'org.springframework.boot:spring-boot-starter-security'
+//    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+
     compileOnly 'org.projectlombok:lombok'
 
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
     annotationProcessor 'org.projectlombok:lombok'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'com.mysql:mysql-connector-j'
