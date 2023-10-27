@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<!--<html lang="ko" xmlns:th="http://www.thymeleaf.org">-->
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <title>게시판 페이지</title>
@@ -7,7 +8,8 @@
 <body>
 <!-- header elemental 을 찾아라, html 태그가 header 인 화면 찾아오기,
 ID 가 #header 인 것, 클래스 가 .header 인 것 -->
-<header th:replace="~{header :: header}"></header>
+<!--<header th:replace="~{header :: header}"></header>-->
+<header id="header"></header>
 <!--메인 - 테이블-->
 <main>
   <!--검색창-->
@@ -70,6 +72,7 @@ ID 가 #header 인 것, 클래스 가 .header 인 것 -->
   </nav>
 </main>
 <!--풋-->
-<footer th:replace="~{footer :: footer}"></footer>
+<!--<footer th:replace="~{footer :: footer}"></footer>-->
+<footer id="footer"></footer>
 </body>
 </html>
