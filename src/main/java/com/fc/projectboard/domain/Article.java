@@ -10,7 +10,7 @@ import java.util.Objects;
 import java.util.Set;
 
 @Getter
-@ToString
+@ToString(callSuper = true) // super Class 까지 들어가서 toString 찍는다는 설정
 @Table(indexes = {
         @Index(columnList = "title"),
         @Index(columnList = "hashtag"),
@@ -35,7 +35,7 @@ public class Article extends AuditingFields {
     private String hashtag; // 해시태그
 
 
-    @OrderBy("id")
+    @OrderBy("createdAt DESC") // 시간순정렬
     @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
     @ToString.Exclude // cascade 결합도가 높기 때문에(양방향 바인딩), 운영시 키 설정 하지 않는다. (순환참조때문에, toString 을 모든 인스턴스에서 실행하기 때문에
     private final Set<ArticleComment> articleCommentSet = new LinkedHashSet<>();
