@@ -8,6 +8,7 @@
 # Querydsl
 /src/main/generated
 
+
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
