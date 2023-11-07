@@ -8,42 +8,21 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Getter
-@ToString
+@ToString(callSuper = true)
 @Table(indexes = {
         @Index(columnList = "content"),
         @Index(columnList = "createdAt"),
-        @Index(columnList = "createBy")
+        @Index(columnList = "createdBy")
 }) // 위의 인덱스로 빠른 서칭 가능하도록 함.
 //@EntityListeners(AuditingEntityListener.class)
 @Entity
 public class ArticleComment extends AuditingFields {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Id         @GeneratedValue(strategy = GenerationType.IDENTITY)     private Long id;
 
-    @Setter
-    @ManyToOne(optional = false)
-    private Article article; // 게시글 (ID)
-    @Setter
-    @ManyToOne(optional = false)
-    private UserAccount userAccount; // 유저 정보 (ID)
-    @Setter
-    @Column(nullable = false, length = 256)
-    private String content; // 본문
-
-//    @CreatedDate
-//    @Column(nullable = false)
-//    private LocalDateTime createdAt; // 생성일시
-//    @CreatedBy
-//    @Column(nullable = false, length = 100)
-//    private String createBy; // 생성자
-//    @CreatedDate
-//    @Column(nullable = false)
-//    private LocalDateTime modifiedAt; // 수정일시
-//    @CreatedDate
-//    @Column(nullable = false, length = 100)
-//    private String modifiedBy; // 수정자
+    @Setter     @ManyToOne(optional = false)                private Article article; // 게시글 (ID)
+    @Setter     @ManyToOne(optional = false)                private UserAccount userAccount; // 유저 정보 (ID)
+    @Setter     @Column(nullable = false, length = 256)     private String content; // 본문
 
     protected ArticleComment() {
     }
@@ -61,9 +40,8 @@ public class ArticleComment extends AuditingFields {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ArticleComment that = (ArticleComment) o;
-        return id != null && Objects.equals(id, that.id);
+        if (!(o instanceof ArticleComment that)) return false;
+        return id != null && id.equals(that.id);
     }
 
     @Override

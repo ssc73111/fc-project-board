@@ -10,18 +10,22 @@ import org.springframework.data.querydsl.binding.QuerydslBinderCustomizer;
 import org.springframework.data.querydsl.binding.QuerydslBindings;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
+import java.util.List;
+
 @RepositoryRestResource
 public interface ArticleCommentRepository extends
         JpaRepository<ArticleComment, Long>,
         QuerydslPredicateExecutor<ArticleComment>,
         QuerydslBinderCustomizer<QArticleComment> {
 
+    List<ArticleComment> findByArticle_Id(Long articleId); // 게시글로 댓글 검색, 게시글의 아이디
+
     @Override
     default void customize(QuerydslBindings bindings, QArticleComment root) {
         bindings.excludeUnlistedProperties(true);
-        bindings.including(root.content, root.createBy, root.createdAt);
+        bindings.including(root.content, root.createdBy, root.createdAt);
         bindings.bind(root.content).first(StringExpression::containsIgnoreCase);
         bindings.bind(root.createdAt).first(DateTimeExpression::eq);
-        bindings.bind(root.createBy).first(StringExpression::containsIgnoreCase);
+        bindings.bind(root.createdBy).first(StringExpression::containsIgnoreCase);
     }
 }

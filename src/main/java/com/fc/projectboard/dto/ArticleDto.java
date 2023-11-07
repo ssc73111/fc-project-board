@@ -1,22 +1,56 @@
 package com.fc.projectboard.dto;
 
+import com.fc.projectboard.domain.Article;
+
 import java.time.LocalDateTime;
 
 /**
  * DTO for {@link com.fc.projectboard.domain.Article}
  */
 public record ArticleDto(
-        LocalDateTime createdAt,
-        String createBy,
+        Long id,
+        UserAccountDto userAccountDto,
         String title,
         String content,
-        String hashtag
+        String hashtag,
+        LocalDateTime createdAt,
+        String createdBy,
+        LocalDateTime modifiedAt,
+        String modifiedBy
 ) {
-    public static ArticleDto of(LocalDateTime createdAt,
-                                String createBy,
+    public static ArticleDto of(Long id,
+                                UserAccountDto userAccountDto,
                                 String title,
                                 String content,
-                                String hashtag) {
-        return new ArticleDto(createdAt, createBy, title, content, hashtag);
+                                String hashtag,
+                                LocalDateTime createdAt,
+                                String createdBy,
+                                LocalDateTime modifiedAt,
+                                String modifiedBy) {
+        return new ArticleDto(id, userAccountDto, title, content, hashtag, createdAt, createdBy, modifiedAt, modifiedBy);
+    }
+
+    // Entity 를 입력하면 DTO 로 반환해주는 메소드
+    public static ArticleDto from(Article entity) {
+        return new ArticleDto(
+                entity.getId(),
+                UserAccountDto.from(entity.getUserAccount()),
+                entity.getTitle(),
+                entity.getContent(),
+                entity.getHashtag(),
+                entity.getCreatedAt(),
+                entity.getCreatedBy(),
+                entity.getModifiedAt(),
+                entity.getModifiedBy()
+        );
+    }
+
+    public Article toEntity() {
+        return Article.of(
+                userAccountDto.toEntity(),
+                title,
+                content,
+                hashtag
+        );
     }
 }
