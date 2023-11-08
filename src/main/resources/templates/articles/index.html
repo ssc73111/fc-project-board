@@ -13,8 +13,11 @@
 <body>
 <!-- header elemental 을 찾아라, html 태그가 header 인 화면 찾아오기,
 ID 가 #header 인 것, 클래스 가 .header 인 것 -->
-<!--<header th:replace="~{header :: header}"></header>-->
-<header id="header"></header>
+<!--<header th:replace="~{header :: header}"> </header>-->
+<header id="header">
+    헤더 삽입부
+    <hr>
+</header>
 <!--메인 - 테이블-->
 <main class="container">
     <!--검색창-->
@@ -73,21 +76,21 @@ ID 가 #header 인 것, 클래스 가 .header 인 것 -->
     </div>
 
     <!--테이블-->
-    <table class="table">
+    <table class="table" id="article-table">
         <thead>
         <tr>
-            <th class="col-6">제목</th>
-            <th class="col-2">해시태그</th>
-            <th class="col">작성자</th>
-            <th class="col">작성일</th>
+            <th class="title col-6">제목</th>
+            <th class="hashtag col-2">해시태그</th>
+            <th class="user-id col">작성자</th>
+            <th class="created-by col">작성일</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td>첫글</td>
-            <td>#태그</td>
-            <td>유저</td>
-            <td>2023-09-21</td>
+            <td class="title"><a>첫글</a></td>
+            <td class="hashtag">#태그</td>
+            <td class="user-id">유저</td>
+            <td class="created-at"><time>2023-09-21</time></td>
         </tr>
         <tr>
             <td>2글</td>
@@ -116,7 +119,10 @@ ID 가 #header 인 것, 클래스 가 .header 인 것 -->
 </main>
 <!--풋-->
 <!--<footer th:replace="~{footer :: footer}"></footer>-->
-<footer id="footer"></footer>
+<footer id="footer">
+    <hr>
+    푸터 삽입부
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
