@@ -28,7 +28,7 @@ public class AuditingFields {
 
     @CreatedBy
     @Column(nullable = false, updatable = false, length = 100)
-    private String createBy; // 생성자
+    private String createdBy; // 생성자
 
     @LastModifiedDate
     @Column(nullable = false)
