@@ -1,4 +1,4 @@
-debug: false # spring ???? ??? ?? ?? ?? ??.
+debug: false
 management:
   endpoints:
     web:
@@ -14,8 +14,8 @@ logging:
 spring:
   datasource:
 #    url: jdbc:mysql://localhost:3306/board
-#    username: board
-#    password: board
+#    username: uno
+#    password: 12345678
 #    driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:h2:mem:testdb
       username: sa
@@ -46,10 +46,10 @@ spring:
 ---
 
 
-#spring:
-#  config:
-#    activate:
-#      on-profile: testdb
+spring:
+  config:
+    activate:
+      on-profile: testdb
 #  datasource:
 #    url: jdbc:h2:mem:board;mode=mysql
 #    driver-class-name: org.h2.Driver
