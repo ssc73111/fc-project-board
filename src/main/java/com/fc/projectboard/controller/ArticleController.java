@@ -45,6 +45,7 @@ public class ArticleController {
 
         List<Integer> barNumbers = paginationService.getPaginationBarNumbers(pageable.getPageNumber(), articles.getTotalPages());
 
+//        articles.getSort().getOrderFor()
         map.addAttribute("articles", articles);
         map.addAttribute("paginationBarNumbers", barNumbers);
 
