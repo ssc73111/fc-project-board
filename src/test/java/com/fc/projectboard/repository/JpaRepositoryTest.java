@@ -19,6 +19,7 @@ class JpaRepositoryTest {
 
     private final ArticleRepository articleRepository;
     private final ArticleCommentRepository articleCommentRepository;
+    private final UserAccountRepository userAccountRepository;
 
     JpaRepositoryTest(
             @Autowired ArticleRepository articleRepository,
@@ -26,6 +27,7 @@ class JpaRepositoryTest {
             @Autowired UserAccountRepository userAccountRepository) {
         this.articleRepository = articleRepository;
         this.articleCommentRepository = articleCommentRepository;
+        this.userAccountRepository = userAccountRepository;
     }
 
     @DisplayName("SELECT 테스트")
@@ -45,10 +47,10 @@ class JpaRepositoryTest {
     @Test
     void givenTestData_whenInserting_thenWorksFine() {
         long previousCount = articleRepository.count();
+        UserAccount userAccount = userAccountRepository.save(UserAccount.of("user02", "pw1234", null, null, null));
 
-        Article saved = articleRepository.save(Article.of(
-                UserAccount.of("user01", "1234", "user01@mail.com", "nick01", "memo"),
-                "2 article", "2 content", ""));
+        Article article = articleRepository.save(Article.of(userAccount, "2 article", "2 content", ""));
+        articleRepository.save(article);
 
         Assertions.assertThat(articleRepository.count())
                 .isEqualTo(previousCount + 1);
