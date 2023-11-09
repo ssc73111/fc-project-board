@@ -7,7 +7,6 @@ import com.fc.projectboard.dto.ArticleDto;
 import com.fc.projectboard.dto.ArticleWithCommentsDto;
 import com.fc.projectboard.dto.UserAccountDto;
 import com.fc.projectboard.repository.ArticleRepository;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -21,6 +20,7 @@ import javax.persistence.EntityNotFoundException;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.catchThrowable;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.*;
@@ -44,7 +44,7 @@ class ArticleServiceTest {
         Page<ArticleDto> articles = sut.searchArticles(null, null, pageable);
 
         // Then
-        Assertions.assertThat(articles).isEmpty();
+        assertThat(articles).isEmpty();
         then(articleRepository).should().findAll(pageable);
     }
 
@@ -61,7 +61,7 @@ class ArticleServiceTest {
         Page<ArticleDto> articles = sut.searchArticles(searchType, searchKeyword, pageable);
 
         // Then
-        Assertions.assertThat(articles).isEmpty();
+        assertThat(articles).isEmpty();
         then(articleRepository).should().findByTitleContaining(searchKeyword, pageable);
     }
 
@@ -77,7 +77,7 @@ class ArticleServiceTest {
         ArticleWithCommentsDto dto = sut.getArticle(articleId);
 
         // Then
-        Assertions.assertThat(dto)
+        assertThat(dto)
                 .hasFieldOrPropertyWithValue("title", article.getTitle())
                 .hasFieldOrPropertyWithValue("content", article.getContent())
                 .hasFieldOrPropertyWithValue("hashtag", article.getHashtag());
@@ -95,7 +95,7 @@ class ArticleServiceTest {
         Throwable t = catchThrowable(() -> sut.getArticle(articleId));
 
         // Then
-        Assertions.assertThat(t)
+        assertThat(t)
                 .isInstanceOf(EntityNotFoundException.class)
                 .hasMessage("게시글이 없습니다 - articleId: " + articleId);
         then(articleRepository).should().findById(articleId);
@@ -129,7 +129,7 @@ class ArticleServiceTest {
         sut.updateArticle(dto);
 
         // Then
-        Assertions.assertThat(article)
+        assertThat(article)
                 .hasFieldOrPropertyWithValue("title", dto.title())
                 .hasFieldOrPropertyWithValue("content", dto.content())
                 .hasFieldOrPropertyWithValue("hashtag", dto.hashtag());
@@ -164,6 +164,18 @@ class ArticleServiceTest {
         then(articleRepository).should().deleteById(articleId);
     }
 
+
+    @DisplayName("게시글 수를 조회하면, 게시글 수를 반환한다.")
+    @Test
+    void givenNothing_whenCountingArticles_thenReturnsArticleCount() {
+        long expected = 0L;
+        given(articleRepository.count()).willReturn(expected);
+
+        long actual = sut.getArticleCount();
+
+        assertThat(actual).isEqualTo(expected);
+        then(articleRepository).should().count();
+    }
 
     private UserAccount createUserAccount() {
         return UserAccount.of(

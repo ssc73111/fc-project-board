@@ -15,7 +15,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @DisplayName("View Controller - 인증")
 @Import(SecurityConfig.class)
-@WebMvcTest
+@WebMvcTest(Void.class) // 컨트롤러 테스트에서 읽어야 할 컨트롤러 빈이 없으므로 Void.class 로 표현.
 public class AuthControllerTest {
 
     private final MockMvc mvc;
