@@ -6,19 +6,19 @@
     <attr sel="main" th:object="${articles}">
         <attr sel="#article-table">
             <attr sel="thead/tr">
-                <attr sel="th.title/a" th:text="'Á¦¸ñ'" th:href="@{/articles(
+                <attr sel="th.title/a" th:text="'ì œëª©'" th:href="@{/articles(
             page=${articles.number},
             sort='title' + (*{sort.getOrderFor('title')} != null ? (*{sort.getOrderFor('title').direction.name} != 'DESC' ? ',desc' : '') : '')
         )}"/>
-                <attr sel="th.hashtag/a" th:text="'ÅÂ±×'" th:href="@{/articles(
+                <attr sel="th.hashtag/a" th:text="'í•´ì‹œíƒœê·¸'" th:href="@{/articles(
             page=${articles.number},
             sort='hashtag' + (*{sort.getOrderFor('hashtag')} != null ? (*{sort.getOrderFor('hashtag').direction.name} != 'DESC' ? ',desc' : '') : '')
         )}"/>
-                <attr sel="th.user-id/a" th:text="'ÀÛ¼º'" th:href="@{/articles(
+                <attr sel="th.user-id/a" th:text="'ì•„ì´ë””'" th:href="@{/articles(
             page=${articles.number},
             sort='userAccount.userId' + (*{sort.getOrderFor('userAccount.userId')} != null ? (*{sort.getOrderFor('userAccount.userId').direction.name} != 'DESC' ? ',desc' : '') : '')
         )}"/>
-                <attr sel="th.created-at/a" th:text="'³¯Â¥'" th:href="@{/articles(
+                <attr sel="th.created-at/a" th:text="'ìž‘ì„±ì¼'" th:href="@{/articles(
             page=${articles.number},
             sort='createdAt' + (*{sort.getOrderFor('createdAt')} != null ? (*{sort.getOrderFor('createdAt').direction.name} != 'DESC' ? ',desc' : '') : '')
         )}"/>
