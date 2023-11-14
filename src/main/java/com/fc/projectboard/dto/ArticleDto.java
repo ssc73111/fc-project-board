@@ -1,12 +1,10 @@
 package com.fc.projectboard.dto;
 
 import com.fc.projectboard.domain.Article;
+import com.fc.projectboard.domain.UserAccount;
 
 import java.time.LocalDateTime;
 
-/**
- * DTO for {@link com.fc.projectboard.domain.Article}
- */
 public record ArticleDto(
         Long id,
         UserAccountDto userAccountDto,
@@ -18,19 +16,15 @@ public record ArticleDto(
         LocalDateTime modifiedAt,
         String modifiedBy
 ) {
-    public static ArticleDto of(Long id,
-                                UserAccountDto userAccountDto,
-                                String title,
-                                String content,
-                                String hashtag,
-                                LocalDateTime createdAt,
-                                String createdBy,
-                                LocalDateTime modifiedAt,
-                                String modifiedBy) {
+
+    public static ArticleDto of(UserAccountDto userAccountDto, String title, String content, String hashtag) {
+        return new ArticleDto(null, userAccountDto, title, content, hashtag, null, null, null, null);
+    }
+
+    public static ArticleDto of(Long id, UserAccountDto userAccountDto, String title, String content, String hashtag, LocalDateTime createdAt, String createdBy, LocalDateTime modifiedAt, String modifiedBy) {
         return new ArticleDto(id, userAccountDto, title, content, hashtag, createdAt, createdBy, modifiedAt, modifiedBy);
     }
 
-    // Entity 를 입력하면 DTO 로 반환해주는 메소드
     public static ArticleDto from(Article entity) {
         return new ArticleDto(
                 entity.getId(),
@@ -45,12 +39,13 @@ public record ArticleDto(
         );
     }
 
-    public Article toEntity() {
+    public Article toEntity(UserAccount userAccount) {
         return Article.of(
-                userAccountDto.toEntity(),
+                userAccount,
                 title,
                 content,
                 hashtag
         );
     }
+
 }
