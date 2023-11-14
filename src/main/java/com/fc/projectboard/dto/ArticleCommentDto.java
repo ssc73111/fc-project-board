@@ -2,6 +2,7 @@ package com.fc.projectboard.dto;
 
 import com.fc.projectboard.domain.Article;
 import com.fc.projectboard.domain.ArticleComment;
+import com.fc.projectboard.domain.UserAccount;
 
 import java.time.LocalDateTime;
 
@@ -18,6 +19,21 @@ public record ArticleCommentDto(
         LocalDateTime modifiedAt,
         String modifiedBy
 ) {
+    public static ArticleCommentDto of(
+            Long articleId,
+            UserAccountDto userAccountDto,
+            String content
+    ) {
+        return new ArticleCommentDto(null,
+                articleId,
+                userAccountDto,
+                content,
+                null,
+                null,
+                null,
+                null);
+    }
+
     public static ArticleCommentDto of(Long id,
                                        Long articleId,
                                        UserAccountDto userAccountDto,
@@ -53,6 +69,14 @@ public record ArticleCommentDto(
         return ArticleComment.of(
                 entity,
                 userAccountDto.toEntity(),
+                content
+        );
+    }
+
+    public ArticleComment toEntity(Article article, UserAccount userAccount) {
+        return ArticleComment.of(
+                article,
+                userAccount,
                 content
         );
     }
