@@ -12,20 +12,14 @@ logging:
     org.hibernate.type.descriptor.sql.BasicBinder: trace # ?? ?? ? ? ??
 
 spring:
-  prifiles:
-    active: ${PROFILE}
   datasource:
 #    url: jdbc:mysql://localhost:3306/board
 #    username: uno
 #    password: 12345678
 #    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mariadb://${DB_HOST}:${DB_PORT}/board
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
-    driver-class-name: org.mariadb.jdbc.Driver
-#      url: jdbc:h2:mem:testdb
-#      username: sa
-#      driver-class-name: org.h2.Driver
+      url: jdbc:h2:mem:testdb
+      username: sa
+      driver-class-name: org.h2.Driver
   jpa:
     defer-datasource-initialization: true
     hibernate:
@@ -50,12 +44,20 @@ spring:
   thymeleaf3:
     decoupled-logic: true
 ---
-
-
+#cloudtype
 spring:
   config:
     activate:
-      on-profile: testdb
+      on-profile: ${PROFILE}
+  datasource:
+    url: jdbc:mariadb://${DB_HOST}:${DB_PORT}/${DB_NAME}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.mariadb.jdbc.Driver
+#spring:
+#  config:
+#    activate:
+#      on-profile: testdb
 #  datasource:
 #    url: jdbc:h2:mem:board;mode=mysql
 #    driver-class-name: org.h2.Driver
