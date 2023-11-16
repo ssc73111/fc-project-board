@@ -1,6 +1,8 @@
 package com.fc.projectboard.util;
 
+
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,8 +11,6 @@ import org.springframework.context.annotation.Import;
 
 import java.math.BigDecimal;
 import java.util.List;
-
-import static org.assertj.core.api.Assertions.*;
 
 @DisplayName("테스트 도구 - Form 데이터 인코더")
 @Import({FormDataEncoder.class, ObjectMapper.class})
@@ -44,7 +44,7 @@ class FormDataEncoderTest {
 
         // Then
         System.out.println(result);
-        assertThat(result).isEqualTo(
+        Assertions.assertThat(result).isEqualTo(
                 "str=This%20'is'%20%22test%22%20string." +
                         "&listStr1=%5Bhello,my,friend%5D" +
                         "&listStr2=hello,my,friend" +
