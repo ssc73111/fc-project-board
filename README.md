@@ -23,7 +23,7 @@ Spring Boot
 * Thymeleaf
 * Spring Security
 * H2 Database
-* MySQL Driver
+* ~~MySQL Driver~~ MariaDB
 * Lombok
 * Spring Boot DevTools
 * Spring Configuration Processor
