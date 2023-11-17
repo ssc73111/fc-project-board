@@ -12,4 +12,10 @@ public class FcProjectBoardApplication {
         SpringApplication.run(FcProjectBoardApplication.class, args);
     }
 
+    // part3. 게시판 서비스 고도화
+    // start.spring.io
+    // developers.kakao.com
+    // vaultproject.io
+    // springdoc.org
+
 }
