@@ -1,6 +1,7 @@
 package com.fc.projectboard.dto.response;
 
 import com.fc.projectboard.dto.ArticleWithCommentsDto;
+import com.fc.projectboard.dto.HashtagDto;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -12,7 +13,7 @@ public record ArticleWithCommentsResponse(
         Long id,
         String title,
         String content,
-        String hashtag,
+        Set<String> hashtags,
         LocalDateTime createdAt,
         String email,
         String nickname,
@@ -23,7 +24,7 @@ public record ArticleWithCommentsResponse(
     public static ArticleWithCommentsResponse of(Long id,
                                                  String title,
                                                  String content,
-                                                 String hashtag,
+                                                 Set<String> hashtags,
                                                  LocalDateTime createdAt,
                                                  String email,
                                                  String nickname,
@@ -32,7 +33,7 @@ public record ArticleWithCommentsResponse(
         return new ArticleWithCommentsResponse(id,
                 title,
                 content,
-                hashtag,
+                hashtags,
                 createdAt,
                 email,
                 nickname,
@@ -50,7 +51,9 @@ public record ArticleWithCommentsResponse(
                 dto.id(),
                 dto.title(),
                 dto.content(),
-                dto.hashtag(),
+                dto.hashtagDtos().stream()
+                        .map(HashtagDto::hashtagName)
+                        .collect(Collectors.toUnmodifiableSet()),
                 dto.createdAt(),
                 dto.userAccountDto().email(),
                 nickname,

@@ -3,9 +3,9 @@ package com.fc.projectboard.dto;
 import com.fc.projectboard.domain.Article;
 
 import java.time.LocalDateTime;
+import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.LinkedHashSet;
 
 public record ArticleWithCommentsDto(
         Long id,
@@ -13,7 +13,7 @@ public record ArticleWithCommentsDto(
         Set<ArticleCommentDto> articleCommentDtos,
         String title,
         String content,
-        String hashtag,
+        Set<HashtagDto> hashtagDtos,
         LocalDateTime createdAt,
         String createdBy,
         LocalDateTime modifiedAt,
@@ -24,7 +24,7 @@ public record ArticleWithCommentsDto(
                                             Set<ArticleCommentDto> articleCommentDtos,
                                             String title,
                                             String content,
-                                            String hashtag,
+                                            Set<HashtagDto> hashtagDtos,
                                             LocalDateTime createdAt,
                                             String createdBy,
                                             LocalDateTime modifiedAt,
@@ -34,7 +34,7 @@ public record ArticleWithCommentsDto(
                 articleCommentDtos,
                 title,
                 content,
-                hashtag,
+                hashtagDtos,
                 createdAt,
                 createdBy,
                 modifiedAt,
@@ -50,7 +50,9 @@ public record ArticleWithCommentsDto(
                         .collect(Collectors.toCollection(LinkedHashSet::new)), // 순서보장
                 entity.getTitle(),
                 entity.getContent(),
-                entity.getHashtag(),
+                entity.getHashtags().stream()
+                        .map(HashtagDto::from)
+                        .collect(Collectors.toUnmodifiableSet()),
                 entity.getCreatedAt(),
                 entity.getCreatedBy(),
                 entity.getModifiedAt(),
