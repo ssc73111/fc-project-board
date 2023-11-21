@@ -30,7 +30,7 @@ public class ArticleComment extends AuditingFields {
     @JoinColumn(name = "userId")
     private UserAccount userAccount; // 유저 정보 (ID)
     @Setter
-    @Column(nullable = false, length = 256)
+    @Column(nullable = false, length = 500)
     private String content; // 본문
 
     protected ArticleComment() {
