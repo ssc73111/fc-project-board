@@ -46,6 +46,16 @@ public class ArticleComment extends AuditingFields {
     @Column(nullable = false, length = 500)
     private String content; // 본문
 
+    @Setter
+    @Column(updatable = false)
+    private Long parentCommentId; // 부모 댓글ID
+
+    @ToString.Exclude
+    @OrderBy("createdAt ASC")
+    @OneToMany(mappedBy = "parentCommentId", cascade= CascadeType.ALL)
+    private Set<ArticleComment> childComments = new LinkedHashSet<>(); // JPA 에서는 final 선언을 하지 않도록 권고
+
+
     protected ArticleComment() {
     }
 
