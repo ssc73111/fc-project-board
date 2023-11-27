@@ -43,7 +43,6 @@ public class ArticleComment extends AuditingFields {
 
     @Setter @Column(nullable = false, length = 500) private String content; // 본문
 
-
     protected ArticleComment() {}
 
     private ArticleComment(Article article, UserAccount userAccount, Long parentCommentId, String content) {
