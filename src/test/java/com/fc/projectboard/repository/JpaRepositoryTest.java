@@ -1,9 +1,11 @@
 package com.fc.projectboard.repository;
 
 import com.fc.projectboard.domain.Article;
+import com.fc.projectboard.domain.ArticleComment;
 import com.fc.projectboard.domain.Hashtag;
 import com.fc.projectboard.domain.UserAccount;
 import org.assertj.core.api.Assertions;
+import org.assertj.core.api.InstanceOfAssertFactories;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -142,6 +144,19 @@ class JpaRepositoryTest {
         Assertions.assertThat(articlePage.getTotalPages()).isEqualTo(4);
     }
 
+
+    @Test
+    void givenParentCommentId_whenSelecting_thenReturnsChildComments() {
+
+        // when
+        Optional<ArticleComment> parentComment = articleCommentRepository.findById(1L);
+
+        // Then
+        Assertions.assertThat(parentComment).get()
+                .hasFieldOrPropertyWithValue("parentCommentId", null)
+                .extracting("childComments", InstanceOfAssertFactories.COLLECTION)
+                .hasSize(4);
+    }
 
     @EnableJpaAuditing
     @TestConfiguration

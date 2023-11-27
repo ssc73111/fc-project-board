@@ -738,1209 +738,1651 @@ Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odi
 
 
 -- 300 댓글
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (49, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (49, 'uno', null,
         'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.',
         '2021-03-02 22:40:04', '2021-04-27 15:38:09', 'Lind', 'Orv');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (108, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (108, 'uno', null,
         'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.',
         '2021-06-08 04:36:02', '2022-01-25 15:35:42', 'Trstram', 'Loy');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (31, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (31, 'uno2', null,
         'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.',
         '2021-04-10 00:47:10', '2021-02-06 20:58:04', 'Duff', 'Early');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (120, 'uno2', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (120, 'uno2', null, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.',
         '2021-08-21 08:39:39', '2021-11-17 22:47:35', 'Sydney', 'Boony');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (123, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (123, 'uno2', null,
         'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.',
         '2021-06-17 10:57:29', '2021-05-13 12:28:47', 'Burk', 'Markus');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (39, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (39, 'uno2', null,
         'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.',
         '2022-01-15 11:37:12', '2021-02-19 17:42:22', 'Calvin', 'Garreth');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (30, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (30, 'uno2', null,
         'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.',
         '2021-11-23 18:29:30', '2021-03-09 00:57:27', 'Kain', 'Bruno');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (57, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (57, 'uno2', null,
         'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.',
         '2021-03-19 18:39:02', '2021-03-16 17:47:17', 'Kippie', 'Alexio');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (41, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (41, 'uno2', null,
         'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.',
         '2021-03-21 16:34:30', '2021-03-17 15:18:55', 'Frannie', 'Horacio');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (100, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (100, 'uno2', null,
         'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.',
         '2021-02-24 16:53:08', '2021-05-09 06:00:58', 'Osborn', 'Pren');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (48, 'uno2', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.', '2021-03-29 08:26:41',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (48, 'uno2', null, 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.', '2021-03-29 08:26:41',
         '2021-11-22 20:55:26', 'Dorie', 'Georgie');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (122, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (122, 'uno2', null,
         'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.',
         '2021-06-12 07:38:25', '2021-03-03 07:14:43', 'Obed', 'Chrissy');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (87, 'uno2', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (87, 'uno2', null, 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
         '2021-05-11 08:47:16', '2021-04-13 00:47:50', 'Reinhard', 'Robbert');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (100, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (100, 'uno2', null,
         'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.',
         '2022-01-18 23:33:51', '2022-01-14 12:38:23', 'Clim', 'Chester');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (22, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (22, 'uno2', null,
         'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.',
         '2021-09-18 10:27:37', '2021-09-29 20:31:09', 'Odie', 'Britt');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (97, 'uno2', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (97, 'uno2', null,
+        'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
         '2021-12-14 01:55:52', '2021-11-02 15:12:00', 'Ulises', 'Denney');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (103, 'uno2', 'Fusce consequat. Nulla nisl. Nunc nisl.', '2021-04-03 11:44:04', '2022-01-05 21:01:34',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (103, 'uno2', null, 'Fusce consequat. Nulla nisl. Nunc nisl.', '2021-04-03 11:44:04', '2022-01-05 21:01:34',
         'Kendricks', 'Aubert');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (25, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (25, 'uno2', null,
         'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.',
         '2021-05-25 09:46:40', '2021-10-10 18:46:59', 'Dal', 'Maxy');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (91, 'uno2', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.', '2021-04-29 23:36:48',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (91, 'uno2', null, 'Phasellus in felis. Donec semper sapien a libero. Nam dui.', '2021-04-29 23:36:48',
         '2021-12-03 12:08:48', 'Vaclav', 'Patric');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (18, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (18, 'uno2', null,
         'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.',
         '2021-09-26 00:29:13', '2021-07-10 01:44:07', 'Carl', 'Riley');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (89, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (89, 'uno2', null,
         'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.',
         '2021-12-11 05:07:10', '2021-05-31 15:26:03', 'Dex', 'Wallas');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (107, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (107, 'uno2', null,
         'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.',
         '2021-10-31 11:33:44', '2021-03-04 15:19:35', 'Lutero', 'Hussein');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (90, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (90, 'uno2', null,
         'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.',
         '2021-08-17 14:52:58', '2021-11-24 16:28:01', 'Garvy', 'Gris');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (121, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (121, 'uno2', null,
         'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.',
         '2021-02-17 16:50:19', '2021-01-31 09:21:51', 'Shayne', 'Stafford');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (91, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (91, 'uno2', null,
         'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.',
         '2021-06-23 10:06:39', '2021-10-27 22:04:41', 'Haze', 'Giraldo');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (32, 'uno2', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (32, 'uno2', null, 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.',
         '2021-10-21 19:41:56', '2021-03-12 02:47:38', 'Cobbie', 'Thornton');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (47, 'uno2', 'Fusce consequat. Nulla nisl. Nunc nisl.', '2021-05-02 07:45:04', '2021-06-26 13:36:44', 'Humfried',
-        'Bram');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (92, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (47, 'uno2', null, 'Fusce consequat. Nulla nisl. Nunc nisl.', '2021-05-02 07:45:04', '2021-06-26 13:36:44',
+        'Humfried', 'Bram');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (92, 'uno2', null,
         'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.',
         '2021-10-22 04:46:24', '2021-07-06 02:25:34', 'Luis', 'Chicky');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (76, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (76, 'uno2', null,
         'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.',
         '2021-12-30 18:39:24', '2021-10-13 03:58:46', 'Derwin', 'Zacherie');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (31, 'uno2', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (31, 'uno2', null, 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.',
         '2021-11-07 02:25:31', '2021-11-30 11:15:34', 'Boris', 'Egbert');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (29, 'uno2', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (29, 'uno2', null, 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.',
         '2021-11-27 19:03:53', '2021-02-16 07:42:30', 'Gabriel', 'Gary');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (115, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (115, 'uno2', null,
         'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.',
         '2021-12-30 17:50:07', '2021-10-13 11:06:50', 'Gilles', 'Derrek');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (106, 'uno2', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.', '2021-06-10 02:26:59',
-        '2021-12-17 18:00:38', 'Jodie', 'Whitney');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (5, 'uno2', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (106, 'uno2', null, 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.',
+        '2021-06-10 02:26:59', '2021-12-17 18:00:38', 'Jodie', 'Whitney');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (5, 'uno2', null, 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.',
         '2021-04-16 12:44:52', '2022-01-19 17:32:59', 'Palmer', 'Orton');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (115, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (115, 'uno2', null,
         'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.',
         '2021-09-09 05:12:56', '2021-07-31 05:07:35', 'Mahmoud', 'Urson');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (112, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (112, 'uno2', null,
         'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.',
         '2021-01-31 06:52:27', '2021-02-07 17:19:58', 'Dunn', 'Monti');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (119, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (119, 'uno2', null,
         'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.',
         '2021-03-20 10:06:32', '2021-07-28 14:45:35', 'Franz', 'Tris');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (66, 'uno2', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.', '2021-09-11 09:32:59',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (66, 'uno2', null, 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.', '2021-09-11 09:32:59',
         '2021-03-17 01:22:39', 'Tony', 'Ikey');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (36, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (36, 'uno2', null,
         'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.',
         '2021-03-04 17:43:07', '2021-10-08 16:20:32', 'Rees', 'Hubey');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (104, 'uno2', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (104, 'uno2', null, 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.',
         '2021-07-11 18:23:15', '2021-06-09 13:23:03', 'Hall', 'Rollie');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (63, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (63, 'uno2', null,
         'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
         '2021-06-26 18:57:48', '2021-06-30 23:24:08', 'Keir', 'Ky');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (99, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (99, 'uno2', null,
         'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.',
         '2021-10-03 02:36:13', '2021-11-27 11:12:43', 'Georgi', 'Thane');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (17, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (17, 'uno2', null,
         'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.',
         '2021-07-19 19:04:40', '2021-06-30 19:59:12', 'Oliver', 'Jarrad');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (33, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (33, 'uno2', null,
         'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.',
         '2021-03-19 04:18:04', '2021-11-28 06:15:06', 'Elvin', 'Sunny');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (102, 'uno2', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', '2021-11-28 18:39:57',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (102, 'uno2', null, 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', '2021-11-28 18:39:57',
         '2021-06-24 11:01:37', 'Fax', 'Jayme');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (28, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (28, 'uno2', null,
         'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.',
         '2021-08-03 06:01:12', '2021-03-12 08:58:02', 'Eldon', 'Emory');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (37, 'uno2', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (37, 'uno2', null, 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
         '2021-05-31 02:48:41', '2021-10-21 23:00:17', 'Northrup', 'Bart');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (75, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (75, 'uno2', null,
         'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
         '2021-03-11 21:47:46', '2021-04-19 14:10:05', 'Timmie', 'Roma');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (70, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (70, 'uno2', null,
         'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.',
         '2021-10-30 16:41:56', '2021-09-06 14:43:59', 'Maximo', 'Eziechiele');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (53, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (53, 'uno2', null,
         'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.',
         '2021-06-09 22:28:41', '2022-01-20 12:47:05', 'Myrvyn', 'Faulkner');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (33, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (33, 'uno2', null,
         'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.',
         '2021-11-18 08:10:04', '2021-10-15 12:18:35', 'Milty', 'Gordie');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (41, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (41, 'uno2', null,
         'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.',
         '2021-05-05 07:39:10', '2021-03-17 04:48:00', 'Guillaume', 'Holt');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (103, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (103, 'uno2', null,
         'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.',
         '2021-07-16 03:33:44', '2021-12-27 03:33:26', 'Cyrille', 'Ruprecht');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (7, 'uno2', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (7, 'uno2', null, 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.',
         '2022-01-04 16:06:48', '2021-06-11 14:41:17', 'Jervis', 'Base');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (26, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (26, 'uno2', null,
         'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.',
         '2022-01-09 16:07:10', '2021-07-25 22:44:28', 'Nikolos', 'Stanly');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (8, 'uno2', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.', '2021-02-14 01:02:43',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (8, 'uno2', null, 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.', '2021-02-14 01:02:43',
         '2022-01-10 03:11:26', 'Stefano', 'Hillel');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (58, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (58, 'uno2', null,
         'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.',
         '2021-02-27 03:57:38', '2021-10-16 02:36:54', 'Flinn', 'Pembroke');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (87, 'uno2', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', '2021-06-17 04:52:04',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (87, 'uno2', null, 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', '2021-06-17 04:52:04',
         '2021-09-29 05:08:41', 'Tome', 'Nat');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (11, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (11, 'uno2', null,
         'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.',
         '2021-06-20 03:31:09', '2021-08-09 08:07:50', 'Garrick', 'Bailey');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (103, 'uno2', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.', '2022-01-15 03:35:49',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (103, 'uno2', null, 'Sed ante. Vivamus tortor. Duis mattis egestas metus.', '2022-01-15 03:35:49',
         '2021-08-19 05:46:11', 'Fonz', 'Mohandas');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (119, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (119, 'uno2', null,
         'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.',
         '2021-10-19 22:27:28', '2021-03-18 00:32:07', 'Swen', 'My');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (33, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (33, 'uno2', null,
         'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
         '2022-01-23 21:02:14', '2021-07-22 18:04:02', 'Klement', 'Giordano');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (118, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (118, 'uno2', null,
         'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.',
         '2021-12-25 15:45:04', '2021-07-25 01:53:41', 'Alister', 'Gavan');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (87, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (87, 'uno2', null,
         'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.',
         '2021-03-13 11:05:05', '2021-04-24 11:01:30', 'Scotty', 'Pascal');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (95, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (95, 'uno2', null,
         'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.',
         '2021-08-21 20:13:53', '2021-05-28 10:09:16', 'Clevey', 'Bailey');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (48, 'uno2', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (48, 'uno2', null, 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.',
         '2021-12-28 19:03:27', '2021-07-19 05:47:56', 'Grantham', 'Hadrian');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (27, 'uno2', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.', '2021-09-08 06:14:44',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (27, 'uno2', null, 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.', '2021-09-08 06:14:44',
         '2021-03-08 01:09:46', 'Gardner', 'Zolly');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (93, 'uno2', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (93, 'uno2', null, 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.',
         '2021-11-17 23:36:20', '2021-04-14 08:16:21', 'Jerome', 'Dev');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (11, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (11, 'uno2', null,
         'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.',
         '2021-06-13 21:19:56', '2021-10-29 10:51:51', 'Lincoln', 'Erwin');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (68, 'uno2', 'In congue. Etiam justo. Etiam pretium iaculis justo.', '2021-08-30 18:51:16',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (68, 'uno2', null, 'In congue. Etiam justo. Etiam pretium iaculis justo.', '2021-08-30 18:51:16',
         '2021-04-04 13:02:51', 'Sky', 'Lindon');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (103, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (103, 'uno2', null,
         'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.',
         '2021-05-25 13:40:27', '2021-07-08 18:29:16', 'Bary', 'Arri');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (109, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (109, 'uno2', null,
         'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.',
         '2021-06-13 00:58:44', '2021-11-02 14:32:58', 'Rafael', 'Ivor');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (86, 'uno2', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.', '2022-01-25 01:28:11',
-        '2021-04-17 01:10:19', 'Mathe', 'Mattie');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (70, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (86, 'uno2', null, 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.',
+        '2022-01-25 01:28:11', '2021-04-17 01:10:19', 'Mathe', 'Mattie');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (70, 'uno2', null,
         'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.',
         '2021-04-12 21:18:27', '2021-07-01 12:03:21', 'Geoffrey', 'Tadeo');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (37, 'uno2', 'Fusce consequat. Nulla nisl. Nunc nisl.', '2021-06-21 12:34:50', '2021-03-09 11:05:09', 'Powell',
-        'Winifield');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (82, 'uno2', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (37, 'uno2', null, 'Fusce consequat. Nulla nisl. Nunc nisl.', '2021-06-21 12:34:50', '2021-03-09 11:05:09',
+        'Powell', 'Winifield');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (82, 'uno2', null, 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.',
         '2021-10-31 08:16:23', '2021-03-23 18:55:47', 'Winifield', 'Rolando');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (69, 'uno2', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.', '2021-03-29 13:14:38',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (69, 'uno2', null, 'Sed ante. Vivamus tortor. Duis mattis egestas metus.', '2021-03-29 13:14:38',
         '2021-03-23 01:58:27', 'Giordano', 'Averell');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (23, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (23, 'uno2', null,
         'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.',
         '2021-05-20 07:38:20', '2021-08-05 13:35:48', 'Lammond', 'Martie');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (53, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (53, 'uno2', null,
         'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.',
         '2021-02-02 22:43:50', '2021-03-21 01:18:12', 'Tades', 'Jedidiah');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (21, 'uno2', 'In congue. Etiam justo. Etiam pretium iaculis justo.', '2021-05-29 06:29:02',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (21, 'uno2', null, 'In congue. Etiam justo. Etiam pretium iaculis justo.', '2021-05-29 06:29:02',
         '2021-10-13 02:23:19', 'Germayne', 'Jermayne');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (94, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (94, 'uno2', null,
         'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.',
         '2021-06-02 12:21:13', '2021-09-03 15:17:13', 'Gregory', 'Woodrow');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (9, 'uno2', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.', '2021-06-07 05:33:53', '2021-04-26 03:00:50',
-        'Theodore', 'Godwin');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (74, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (9, 'uno2', null, 'Sed ante. Vivamus tortor. Duis mattis egestas metus.', '2021-06-07 05:33:53',
+        '2021-04-26 03:00:50', 'Theodore', 'Godwin');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (74, 'uno2', null,
         'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.',
         '2021-11-22 01:27:42', '2021-12-07 13:24:52', 'Richy', 'Garvin');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (93, 'uno2', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (93, 'uno2', null, 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.',
         '2021-11-29 14:10:08', '2021-12-21 15:41:28', 'Skipp', 'Broderick');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (66, 'uno2', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (66, 'uno2', null, 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.',
         '2021-07-18 13:45:38', '2021-09-07 10:37:11', 'Kaine', 'Rooney');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (46, 'uno2', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (46, 'uno2', null, 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.',
         '2021-09-08 17:42:59', '2021-08-28 15:12:30', 'Humfrid', 'Steffen');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (26, 'uno2', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (26, 'uno2', null, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.',
         '2022-01-22 19:23:45', '2021-04-19 07:53:02', 'Jamie', 'Reinaldos');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (2, 'uno2', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (2, 'uno2', null, 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.',
         '2021-02-23 17:42:56', '2021-10-09 08:03:13', 'Glynn', 'Truman');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (15, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (15, 'uno2', null,
         'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.',
         '2021-10-12 14:19:16', '2021-09-11 22:13:27', 'Maddy', 'Tynan');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (96, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (96, 'uno2', null,
         'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.',
         '2021-12-27 11:42:15', '2022-01-19 14:11:02', 'Merill', 'Kermit');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (118, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (118, 'uno2', null,
         'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.',
         '2021-07-30 23:57:48', '2021-11-13 11:45:31', 'Llewellyn', 'Welch');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (118, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (118, 'uno2', null,
         'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.',
         '2021-07-21 15:39:09', '2021-10-24 12:13:07', 'Augustine', 'Cash');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (82, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (82, 'uno2', null,
         'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.',
         '2021-04-10 22:46:57', '2021-10-07 06:49:09', 'Jermain', 'Felice');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (17, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (17, 'uno2', null,
         'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.',
         '2021-02-10 12:15:50', '2021-02-08 21:36:20', 'Ned', 'Marlow');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (118, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (118, 'uno2', null,
         'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.',
         '2021-04-28 19:26:22', '2021-04-01 16:32:22', 'Griswold', 'Brion');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (37, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (37, 'uno2', null,
         'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.',
         '2021-04-23 15:49:37', '2021-12-14 18:20:38', 'Lemuel', 'Karel');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (60, 'uno2', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (60, 'uno2', null, 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.',
         '2021-08-14 16:26:15', '2021-07-05 14:35:38', 'Yance', 'Henderson');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (114, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (114, 'uno2', null,
         'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.',
         '2021-05-20 19:07:27', '2022-01-26 17:02:57', 'Munroe', 'Olvan');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (20, 'uno2', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (20, 'uno2', null,
+        'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
         '2021-08-30 20:30:28', '2021-09-11 10:18:50', 'Salim', 'Keene');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (51, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (51, 'uno2', null,
         'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.',
         '2021-03-08 12:55:54', '2021-07-12 23:56:12', 'Rustie', 'Lorne');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (50, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (50, 'uno2', null,
         'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.',
         '2021-10-13 17:57:44', '2021-05-10 21:31:48', 'Lorry', 'Alex');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (43, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (43, 'uno2', null,
         'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.',
         '2021-04-02 01:37:13', '2021-09-16 05:24:04', 'Leonidas', 'Fulton');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (115, 'uno2', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (115, 'uno2', null, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.',
         '2021-11-11 04:39:17', '2021-11-03 15:21:42', 'Marietta', 'Brnaba');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (97, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (97, 'uno2', null,
         'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.',
         '2021-01-31 06:45:18', '2021-03-10 22:17:41', 'Obie', 'Allard');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (8, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (8, 'uno2', null,
         'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
         '2021-08-25 23:41:07', '2021-04-19 09:14:12', 'Dru', 'Osborn');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (11, 'uno2', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.', '2021-11-28 19:55:06',
-        '2021-09-22 19:59:06', 'Iain', 'Job');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (43, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (11, 'uno2', null, 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.',
+        '2021-11-28 19:55:06', '2021-09-22 19:59:06', 'Iain', 'Job');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (43, 'uno2', null,
         'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.',
         '2021-09-29 14:30:08', '2021-04-05 17:41:49', 'Rikki', 'Hymie');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (31, 'uno2', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (31, 'uno2', null, 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.',
         '2021-10-05 20:08:45', '2021-10-31 14:59:42', 'Em', 'Aldric');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (88, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (88, 'uno2', null,
         'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.',
         '2021-03-27 00:02:27', '2021-12-17 06:02:34', 'Burty', 'Martainn');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (56, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (56, 'uno2', null,
         'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.',
         '2021-12-22 12:41:15', '2021-04-14 03:12:08', 'Garvin', 'Esra');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (9, 'uno2', 'Fusce consequat. Nulla nisl. Nunc nisl.', '2021-05-29 13:08:55', '2021-08-01 08:38:29', 'Siward',
-        'Garey');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (31, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (9, 'uno2', null, 'Fusce consequat. Nulla nisl. Nunc nisl.', '2021-05-29 13:08:55', '2021-08-01 08:38:29',
+        'Siward', 'Garey');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (31, 'uno2', null,
         'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.',
         '2021-12-15 19:49:25', '2022-01-27 19:49:47', 'Fran', 'Cece');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (1, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (1, 'uno2', null,
         'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.',
         '2021-03-02 11:57:54', '2021-05-09 12:36:08', 'Torry', 'Rolando');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (110, 'uno2', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (110, 'uno2', null,
+        'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.',
         '2021-07-27 01:40:15', '2021-06-25 16:54:44', 'Kevin', 'Chico');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (78, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (78, 'uno2', null,
         'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.',
         '2021-03-30 22:33:45', '2021-03-13 12:40:17', 'Xavier', 'Nicol');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (73, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (73, 'uno2', null,
         'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.',
         '2021-11-26 19:26:39', '2021-04-14 20:32:25', 'Grannie', 'Cobbie');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (20, 'uno2', 'Fusce consequat. Nulla nisl. Nunc nisl.', '2021-06-30 06:56:10', '2021-02-25 03:34:01', 'Haskell',
-        'Terence');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (99, 'uno2', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (20, 'uno2', null, 'Fusce consequat. Nulla nisl. Nunc nisl.', '2021-06-30 06:56:10', '2021-02-25 03:34:01',
+        'Haskell', 'Terence');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (99, 'uno2', null, 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.',
         '2021-07-27 20:53:45', '2021-03-13 15:29:58', 'Nealy', 'Doyle');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (58, 'uno2', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (58, 'uno2', null, 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.',
         '2021-08-04 21:54:34', '2021-05-17 14:36:46', 'Sibyl', 'Consalve');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (33, 'uno2', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.', '2021-08-12 10:07:09',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (33, 'uno2', null, 'Sed ante. Vivamus tortor. Duis mattis egestas metus.', '2021-08-12 10:07:09',
         '2021-02-14 00:36:15', 'Arvy', 'Tymothy');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (111, 'uno2', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (111, 'uno2', null, 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.',
         '2021-09-16 06:12:57', '2021-09-04 15:51:30', 'Morten', 'Gerhard');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (83, 'uno2',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (83, 'uno2', null,
         'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.',
         '2021-12-16 10:24:39', '2021-02-25 21:15:30', 'Sheridan', 'Cash');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (13, 'uno', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (13, 'uno', null, 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.',
         '2021-09-25 16:26:15', '2021-09-04 06:36:17', 'Heath', 'Irwinn');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (47, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (47, 'uno', null,
         'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.',
         '2021-02-15 09:00:36', '2021-12-02 02:50:19', 'Bordy', 'Kliment');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (37, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (37, 'uno', null,
         'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.',
         '2021-08-08 15:11:06', '2021-05-31 22:32:58', 'Graeme', 'Cody');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (19, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (19, 'uno', null,
         'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.',
         '2021-01-29 18:57:18', '2021-10-01 12:57:33', 'Ram', 'Gino');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (9, 'uno', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (9, 'uno', null, 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
         '2021-12-31 02:29:25', '2021-02-04 09:29:05', 'Umberto', 'Timotheus');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (3, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (3, 'uno', null,
         'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.',
         '2021-09-01 13:11:45', '2021-10-28 14:30:23', 'Juan', 'Forest');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (97, 'uno', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (97, 'uno', null,
+        'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
         '2021-12-19 15:39:54', '2021-07-10 04:11:12', 'Urbanus', 'Noach');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (88, 'uno', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (88, 'uno', null, 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.',
         '2021-11-12 11:38:06', '2021-12-13 15:21:53', 'Zack', 'Jammal');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (20, 'uno', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', '2021-10-20 18:22:32',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (20, 'uno', null, 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', '2021-10-20 18:22:32',
         '2021-07-10 16:15:54', 'Norrie', 'Barny');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (93, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (93, 'uno', null,
         'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.',
         '2021-09-08 08:49:05', '2021-02-27 04:15:27', 'Donn', 'Adan');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (61, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (61, 'uno', null,
         'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.',
         '2021-06-24 16:06:45', '2021-10-31 08:38:22', 'Paxton', 'Stevy');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (73, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (73, 'uno', null,
         'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.',
         '2021-03-11 20:20:34', '2021-04-19 22:24:56', 'Carolus', 'Niven');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (60, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (60, 'uno', null,
         'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.',
         '2021-10-12 16:46:55', '2021-05-08 14:42:18', 'Cameron', 'Beniamino');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (41, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (41, 'uno', null,
         'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.',
         '2021-03-16 05:38:39', '2021-02-26 21:41:53', 'Flint', 'Artur');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (116, 'uno', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (116, 'uno', null, 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
         '2021-08-15 22:55:29', '2021-09-22 03:03:29', 'Efren', 'Carrol');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (113, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (113, 'uno', null,
         'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.',
         '2021-06-13 10:25:18', '2021-10-27 10:34:16', 'Nevins', 'Caspar');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (86, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (86, 'uno', null,
         'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.',
         '2021-04-12 11:14:15', '2021-02-13 09:33:29', 'Carrol', 'Isac');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (122, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (122, 'uno', null,
         'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.',
         '2021-11-30 20:48:06', '2021-02-19 12:25:33', 'Dagny', 'Silvain');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (42, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (42, 'uno', null,
         'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.',
         '2021-09-29 09:08:16', '2021-01-29 16:01:20', 'Thurstan', 'Vidovic');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (3, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (3, 'uno', null,
         'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.',
         '2021-02-10 03:27:32', '2021-11-07 23:23:44', 'Jerrold', 'Mac');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (92, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (92, 'uno', null,
         'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.',
         '2021-09-24 15:03:04', '2021-03-09 13:36:02', 'Tommie', 'Uriel');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (3, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (3, 'uno', null,
         'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.',
         '2021-03-18 14:50:37', '2021-04-25 15:04:11', 'Desi', 'Patrizius');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (24, 'uno', 'In congue. Etiam justo. Etiam pretium iaculis justo.', '2021-04-26 17:14:34', '2021-07-04 04:58:06',
-        'Frederigo', 'Heath');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (62, 'uno', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (24, 'uno', null, 'In congue. Etiam justo. Etiam pretium iaculis justo.', '2021-04-26 17:14:34',
+        '2021-07-04 04:58:06', 'Frederigo', 'Heath');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (62, 'uno', null, 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.',
         '2021-07-30 17:36:48', '2021-02-22 02:50:31', 'Conroy', 'Ralf');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (49, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (49, 'uno', null,
         'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.',
         '2021-06-30 07:55:25', '2021-05-01 04:31:05', 'Carolus', 'Kiley');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (11, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (11, 'uno', null,
         'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.',
         '2021-11-30 02:55:08', '2021-12-17 10:25:02', 'Killian', 'Ewell');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (3, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (3, 'uno', null,
         'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.',
         '2021-10-17 05:31:12', '2021-12-19 13:25:46', 'Gary', 'Korey');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (89, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (89, 'uno', null,
         'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.',
         '2021-05-16 00:33:39', '2021-04-21 11:16:34', 'Jeth', 'Shem');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (104, 'uno', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.', '2021-04-11 19:12:30',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (104, 'uno', null, 'Phasellus in felis. Donec semper sapien a libero. Nam dui.', '2021-04-11 19:12:30',
         '2021-07-28 21:58:46', 'Archambault', 'Elwyn');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (120, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (120, 'uno', null,
         'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.',
         '2021-11-09 07:48:20', '2021-05-25 01:18:53', 'Owen', 'Aldrich');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (119, 'uno', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', '2021-12-11 18:39:03',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (119, 'uno', null, 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', '2021-12-11 18:39:03',
         '2021-05-29 15:07:40', 'Fleming', 'Kaine');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (71, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (71, 'uno', null,
         'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.',
         '2021-09-22 10:07:58', '2021-06-29 20:27:29', 'Gianni', 'Leroi');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (45, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (45, 'uno', null,
         'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.',
         '2021-06-03 15:54:44', '2022-01-21 14:50:05', 'Saundra', 'Timofei');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (78, 'uno', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.', '2021-05-19 04:22:01',
-        '2021-02-23 20:41:21', 'Raphael', 'Earl');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (29, 'uno', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (78, 'uno', null, 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.',
+        '2021-05-19 04:22:01', '2021-02-23 20:41:21', 'Raphael', 'Earl');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (29, 'uno', null, 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
         '2021-02-14 18:22:02', '2021-03-16 18:55:35', 'Thorstein', 'Boycie');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (14, 'uno', 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (14, 'uno', null, 'Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.',
         '2021-12-12 21:27:12', '2022-01-13 21:51:23', 'Haywood', 'Orland');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (36, 'uno', 'In congue. Etiam justo. Etiam pretium iaculis justo.', '2021-12-04 23:26:12', '2021-06-24 00:39:21',
-        'Arley', 'Bealle');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (16, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (36, 'uno', null, 'In congue. Etiam justo. Etiam pretium iaculis justo.', '2021-12-04 23:26:12',
+        '2021-06-24 00:39:21', 'Arley', 'Bealle');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (16, 'uno', null,
         'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.',
         '2021-10-20 22:49:39', '2021-09-16 21:40:00', 'Gerik', 'Tom');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (30, 'uno', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (30, 'uno', null, 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
         '2021-04-22 18:41:14', '2021-02-14 23:42:46', 'Kimbell', 'Avigdor');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (119, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (119, 'uno', null,
         'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.',
         '2021-11-05 20:30:44', '2021-08-23 04:17:55', 'Manny', 'Roth');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (49, 'uno', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (49, 'uno', null, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.',
         '2021-03-30 20:19:39', '2021-11-11 18:15:08', 'Clare', 'Frants');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (53, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (53, 'uno', null,
         'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.',
         '2021-07-25 16:59:57', '2021-12-26 16:40:39', 'Verge', 'Uriel');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (58, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (58, 'uno', null,
         'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.',
         '2021-10-24 00:02:07', '2021-05-14 21:38:51', 'Tobe', 'Padraig');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (97, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (97, 'uno', null,
         'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.',
         '2021-03-15 03:17:22', '2021-03-09 07:40:08', 'Tommy', 'Stanton');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (58, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (58, 'uno', null,
         'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.',
         '2021-02-17 15:44:23', '2021-05-12 19:09:44', 'Addy', 'Georas');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (18, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (18, 'uno', null,
         'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.',
         '2022-01-14 07:16:57', '2022-01-18 13:43:16', 'Salem', 'Franklin');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (48, 'uno', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (48, 'uno', null, 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.',
         '2021-03-25 20:09:14', '2021-06-05 06:26:54', 'Wang', 'Gunner');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (1, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (1, 'uno', null,
         'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.',
         '2021-10-28 04:52:36', '2021-12-25 06:43:01', 'Brendan', 'Rouvin');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (102, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (102, 'uno', null,
         'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.',
         '2021-06-13 23:00:54', '2021-03-02 16:25:07', 'Bran', 'Chet');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (105, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (105, 'uno', null,
         'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.',
         '2021-07-23 01:10:10', '2021-10-09 04:58:11', 'My', 'Conny');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (1, 'uno', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '2021-06-15 07:11:35',
-        '2021-11-10 07:57:55', 'Raimondo', 'Lou');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (87, 'uno', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (1, 'uno', null, 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.',
+        '2021-06-15 07:11:35', '2021-11-10 07:57:55', 'Raimondo', 'Lou');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (87, 'uno', null, 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
         '2021-04-12 09:26:39', '2021-02-05 04:29:18', 'Curry', 'Gian');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (113, 'uno', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (113, 'uno', null,
+        'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.',
         '2021-04-14 23:17:12', '2021-12-21 20:18:49', 'Raleigh', 'Marlon');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (74, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (74, 'uno', null,
         'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.',
         '2021-10-26 17:58:35', '2022-01-27 11:45:17', 'Lauren', 'Hoebart');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (28, 'uno', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (28, 'uno', null, 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.',
         '2021-05-17 07:57:54', '2021-03-16 07:48:16', 'Tonnie', 'Borden');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (47, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (47, 'uno', null,
         'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.',
         '2021-07-30 20:29:36', '2021-12-29 07:52:24', 'Galvin', 'Olenolin');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (104, 'uno', 'In congue. Etiam justo. Etiam pretium iaculis justo.', '2021-07-16 13:21:55',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (104, 'uno', null, 'In congue. Etiam justo. Etiam pretium iaculis justo.', '2021-07-16 13:21:55',
         '2021-02-18 15:51:26', 'Burty', 'Nicky');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (121, 'uno', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', '2021-02-02 04:12:07',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (121, 'uno', null, 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', '2021-02-02 04:12:07',
         '2021-12-07 02:32:36', 'Ashton', 'Galvin');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (12, 'uno', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '2021-10-18 21:01:27',
-        '2021-10-02 00:45:14', 'Pacorro', 'Johan');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (62, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (12, 'uno', null, 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.',
+        '2021-10-18 21:01:27', '2021-10-02 00:45:14', 'Pacorro', 'Johan');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (62, 'uno', null,
         'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.',
         '2021-02-26 12:57:07', '2021-05-28 13:25:39', 'Chip', 'Lazaro');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (3, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (3, 'uno', null,
         'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.',
         '2021-08-09 03:26:07', '2021-11-24 20:01:46', 'Odey', 'Alasdair');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (111, 'uno', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (111, 'uno', null, 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.',
         '2021-09-11 06:11:36', '2021-02-08 18:50:27', 'Francis', 'Clywd');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (15, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (15, 'uno', null,
         'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.',
         '2021-10-28 03:52:43', '2021-05-07 04:46:57', 'Ambros', 'Allistir');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (63, 'uno', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (63, 'uno', null,
+        'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
         '2021-02-26 11:44:06', '2021-04-04 10:50:51', 'Godwin', 'Darn');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (64, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (64, 'uno', null,
         'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
         '2021-09-18 01:26:49', '2021-10-18 22:02:35', 'Saw', 'Hersch');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (75, 'uno', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (75, 'uno', null, 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
         '2021-05-07 22:15:22', '2021-04-09 04:53:46', 'Jonas', 'Walther');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (115, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (115, 'uno', null,
         'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.',
         '2022-01-09 09:24:31', '2021-11-23 05:50:30', 'Maison', 'Rutledge');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (66, 'uno', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.', '2021-04-29 15:50:03',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (66, 'uno', null, 'Phasellus in felis. Donec semper sapien a libero. Nam dui.', '2021-04-29 15:50:03',
         '2021-10-09 05:24:40', 'Warde', 'Ezra');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (113, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (113, 'uno', null,
         'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.',
         '2021-11-27 02:08:50', '2021-09-17 23:44:27', 'Beale', 'John');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (22, 'uno', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', '2021-12-07 04:27:25',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (22, 'uno', null, 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', '2021-12-07 04:27:25',
         '2021-08-01 16:35:36', 'Stephanus', 'Woodie');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (101, 'uno', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (101, 'uno', null,
+        'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.',
         '2022-01-09 23:00:02', '2021-02-03 16:50:34', 'Kendrick', 'Stevie');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (74, 'uno', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (74, 'uno', null, 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
         '2021-11-13 17:40:36', '2021-05-24 19:48:38', 'Renato', 'Lazar');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (117, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (117, 'uno', null,
         'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.',
         '2021-04-07 23:37:24', '2021-07-31 23:54:24', 'Clim', 'Kerwin');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (109, 'uno', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (109, 'uno', null, 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.',
         '2021-06-01 10:19:17', '2021-05-05 01:35:40', 'Merry', 'Alejoa');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (35, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (35, 'uno', null,
         'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.',
         '2021-07-26 04:44:47', '2021-08-04 20:39:24', 'Hank', 'Bronnie');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (58, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (58, 'uno', null,
         'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.',
         '2021-06-05 17:56:40', '2021-12-16 06:08:45', 'Pembroke', 'Rudolfo');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (94, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (94, 'uno', null,
         'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.',
         '2021-07-27 15:28:41', '2021-02-03 15:56:24', 'Skye', 'Travus');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (110, 'uno', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', '2021-05-13 08:24:45',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (110, 'uno', null, 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', '2021-05-13 08:24:45',
         '2021-11-05 10:30:53', 'Anatole', 'Josh');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (38, 'uno', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.', '2022-01-03 09:28:12',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (38, 'uno', null, 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.', '2022-01-03 09:28:12',
         '2021-06-15 10:09:44', 'Wolfy', 'Denver');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (112, 'uno', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (112, 'uno', null, 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.',
         '2021-10-28 06:09:00', '2021-04-18 09:32:47', 'Ave', 'Samson');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (55, 'uno', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '2021-03-30 07:04:00',
-        '2021-06-11 23:16:21', 'Merrick', 'Taddeo');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (38, 'uno', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (55, 'uno', null, 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.',
+        '2021-03-30 07:04:00', '2021-06-11 23:16:21', 'Merrick', 'Taddeo');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (38, 'uno', null, 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.',
         '2021-05-12 15:07:01', '2021-03-01 11:26:25', 'Lamar', 'Denver');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (57, 'uno', 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (57, 'uno', null, 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.',
         '2021-07-19 19:58:41', '2022-01-09 10:16:22', 'Marc', 'Dudley');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (110, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (110, 'uno', null,
         'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.',
         '2021-10-10 12:35:10', '2021-06-08 16:03:44', 'Cirilo', 'Hewie');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (16, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (16, 'uno', null,
         'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.',
         '2021-09-15 20:31:58', '2021-09-10 04:08:45', 'Parnell', 'Justen');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (77, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (77, 'uno', null,
         'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.',
         '2021-10-10 05:06:58', '2021-03-07 18:41:41', 'Wait', 'Jefferey');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (80, 'uno', 'In congue. Etiam justo. Etiam pretium iaculis justo.', '2021-11-29 14:56:54', '2021-08-11 08:38:14',
-        'Oliver', 'Gordan');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (93, 'uno', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.', '2021-08-08 12:08:41', '2021-02-21 14:20:28',
-        'Boy', 'Erhard');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (21, 'uno', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (80, 'uno', null, 'In congue. Etiam justo. Etiam pretium iaculis justo.', '2021-11-29 14:56:54',
+        '2021-08-11 08:38:14', 'Oliver', 'Gordan');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (93, 'uno', null, 'Sed ante. Vivamus tortor. Duis mattis egestas metus.', '2021-08-08 12:08:41',
+        '2021-02-21 14:20:28', 'Boy', 'Erhard');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (21, 'uno', null, 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.',
         '2021-02-02 10:37:42', '2021-07-07 09:13:50', 'Kingsley', 'Cristiano');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (121, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (121, 'uno', null,
         'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.',
         '2021-05-01 16:02:15', '2021-03-16 04:57:53', 'Jack', 'Emerson');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (81, 'uno', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (81, 'uno', null, 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.',
         '2021-10-06 07:22:15', '2021-04-13 18:38:19', 'Shadow', 'Olivero');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (115, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (115, 'uno', null,
         'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.',
         '2021-08-21 18:30:28', '2022-01-27 04:56:23', 'Torrance', 'Jay');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (71, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (71, 'uno', null,
         'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.',
         '2021-07-14 22:27:52', '2021-12-20 14:06:44', 'Griz', 'Rice');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (10, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (10, 'uno', null,
         'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.',
         '2021-09-22 03:34:12', '2021-08-02 23:30:33', 'Johnathan', 'Gasper');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (83, 'uno', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (83, 'uno', null, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.',
         '2021-11-09 09:44:05', '2021-09-27 16:32:41', 'Krishnah', 'Gauthier');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (65, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (65, 'uno', null,
         'Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.',
         '2021-06-05 10:03:50', '2021-04-03 21:14:02', 'Padraig', 'Hagan');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (65, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (65, 'uno', null,
         'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.',
         '2021-02-08 03:59:27', '2022-01-05 18:54:29', 'Marven', 'Cesaro');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (40, 'uno', 'Fusce consequat. Nulla nisl. Nunc nisl.', '2021-09-10 06:18:43', '2022-01-05 12:44:51', 'Iggy',
-        'Giffer');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (40, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (40, 'uno', null, 'Fusce consequat. Nulla nisl. Nunc nisl.', '2021-09-10 06:18:43', '2022-01-05 12:44:51',
+        'Iggy', 'Giffer');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (40, 'uno', null,
         'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.',
         '2021-11-24 21:14:01', '2021-07-24 00:45:50', 'Tanner', 'Alasdair');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (53, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (53, 'uno', null,
         'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.',
         '2021-04-30 20:09:55', '2021-07-19 23:40:23', 'Germain', 'Raffaello');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (35, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (35, 'uno', null,
         'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
         '2021-09-23 19:49:04', '2021-07-17 12:46:19', 'Pat', 'Lynn');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (108, 'uno', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (108, 'uno', null,
+        'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
         '2021-02-26 17:41:27', '2021-06-19 13:50:02', 'Ancell', 'Zack');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (123, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (123, 'uno', null,
         'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.',
         '2021-04-02 23:38:41', '2021-05-25 09:51:50', 'Augustus', 'Noak');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (10, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (10, 'uno', null,
         'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.',
         '2021-08-04 16:14:43', '2021-05-14 16:24:37', 'Verne', 'Jae');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (70, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (70, 'uno', null,
         'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.',
         '2021-11-06 06:46:35', '2022-01-10 16:32:48', 'Guillermo', 'Donavon');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (66, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (66, 'uno', null,
         'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.',
         '2022-01-14 20:49:05', '2021-02-17 00:51:12', 'Ermin', 'Eugenius');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (60, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (60, 'uno', null,
         'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.',
         '2021-10-31 12:14:52', '2021-12-16 14:05:55', 'Beniamino', 'Lucius');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (86, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (86, 'uno', null,
         'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.',
         '2021-05-14 17:45:54', '2021-11-04 17:25:01', 'Roman', 'Pippo');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (46, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (46, 'uno', null,
         'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.',
         '2021-12-30 18:54:39', '2021-10-27 17:51:06', 'Laird', 'Rooney');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (109, 'uno', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.', '2021-02-15 22:55:20',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (109, 'uno', null, 'Phasellus in felis. Donec semper sapien a libero. Nam dui.', '2021-02-15 22:55:20',
         '2021-05-19 06:29:30', 'Harwell', 'Hamish');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (29, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (29, 'uno', null,
         'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.',
         '2021-03-03 14:41:45', '2021-08-21 19:45:03', 'Farrell', 'Putnam');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (4, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (4, 'uno', null,
         'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.',
         '2021-05-07 23:41:49', '2021-07-20 15:05:46', 'Cullan', 'Brenden');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (72, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (72, 'uno', null,
         'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.',
         '2022-01-21 09:58:07', '2021-09-30 10:22:58', 'Reinhard', 'Gustav');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (103, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (103, 'uno', null,
         'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.',
         '2021-06-21 04:54:38', '2021-02-04 14:03:34', 'Redford', 'Odey');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (3, 'uno', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (3, 'uno', null, 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.',
         '2021-07-03 22:53:01', '2021-12-17 02:16:19', 'Onofredo', 'Burnard');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (47, 'uno', 'In congue. Etiam justo. Etiam pretium iaculis justo.', '2021-04-14 07:12:05', '2022-01-25 09:31:18',
-        'Ludwig', 'Bink');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (108, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (47, 'uno', null, 'In congue. Etiam justo. Etiam pretium iaculis justo.', '2021-04-14 07:12:05',
+        '2022-01-25 09:31:18', 'Ludwig', 'Bink');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (108, 'uno', null,
         'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
         '2021-01-29 06:11:21', '2021-11-28 10:36:30', 'Brose', 'Dory');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (18, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (18, 'uno', null,
         'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.',
         '2021-07-11 22:57:32', '2021-12-29 13:13:47', 'Jorgan', 'Tully');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (122, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (122, 'uno', null,
         'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.',
         '2021-07-07 11:28:36', '2022-01-11 22:25:11', 'Noak', 'Randi');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (10, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (10, 'uno', null,
         'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.',
         '2021-01-28 04:18:05', '2021-03-15 00:49:20', 'Robers', 'Lucien');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (100, 'uno', 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (100, 'uno', null, 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.',
         '2021-10-21 10:15:11', '2021-07-15 02:29:24', 'Ellwood', 'Haley');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (109, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (109, 'uno', null,
         'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.',
         '2021-09-20 02:30:44', '2021-02-23 21:10:19', 'Rand', 'Farr');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (7, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (7, 'uno', null,
         'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.',
         '2021-03-30 03:51:17', '2021-03-12 03:31:28', 'Benn', 'Felicio');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (3, 'uno', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.', '2021-09-28 17:14:00',
-        '2021-11-10 07:58:33', 'Bram', 'Reamonn');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (19, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (3, 'uno', null, 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.',
+        '2021-09-28 17:14:00', '2021-11-10 07:58:33', 'Bram', 'Reamonn');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (19, 'uno', null,
         'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.',
         '2021-11-21 02:15:09', '2021-09-26 07:25:00', 'Tobiah', 'Elvyn');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (29, 'uno', 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.', '2021-06-17 22:45:24',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (29, 'uno', null, 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.', '2021-06-17 22:45:24',
         '2021-02-22 00:27:48', 'Tuckie', 'Alano');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (38, 'uno', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (38, 'uno', null,
+        'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
         '2021-03-08 06:05:41', '2021-08-23 14:39:11', 'Torrey', 'Lincoln');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (89, 'uno', 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (89, 'uno', null,
+        'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
         '2021-05-02 07:48:14', '2021-04-21 23:59:10', 'Sheppard', 'Mordy');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (37, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (37, 'uno', null,
         'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.',
         '2021-09-23 10:38:38', '2021-09-28 17:28:23', 'Alasteir', 'Rodolph');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (96, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (96, 'uno', null,
         'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.',
         '2021-12-13 02:05:08', '2021-08-13 20:19:31', 'Curcio', 'Frankie');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (9, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (9, 'uno', null,
         'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.',
         '2021-08-03 08:05:59', '2021-07-18 13:07:29', 'Randal', 'Lowrance');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (95, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (95, 'uno', null,
         'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.',
         '2021-05-23 16:26:14', '2022-01-27 15:13:11', 'Corbin', 'Gardy');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (41, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (41, 'uno', null,
         'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.',
         '2021-04-12 18:28:56', '2021-09-16 06:18:28', 'Sammie', 'Jerrold');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (80, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (80, 'uno', null,
         'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.',
         '2021-02-20 22:12:07', '2021-05-20 15:04:18', 'Abram', 'Foster');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (46, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (46, 'uno', null,
         'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.',
         '2021-02-05 14:12:10', '2021-04-21 22:37:57', 'Rusty', 'Martin');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (117, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (117, 'uno', null,
         'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.',
         '2021-08-30 23:52:53', '2021-04-13 04:02:26', 'Mohammed', 'Roman');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (117, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (117, 'uno', null,
         'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.',
         '2021-11-28 01:58:02', '2021-12-21 11:52:52', 'Tomas', 'Lorry');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (102, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (102, 'uno', null,
         'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.',
         '2021-02-07 07:54:20', '2022-01-26 07:40:14', 'Laurence', 'Obediah');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (105, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (105, 'uno', null,
         'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.',
         '2021-12-07 21:09:27', '2021-02-25 05:08:10', 'Doyle', 'Manolo');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (31, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (31, 'uno', null,
         'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.',
         '2021-06-08 17:54:29', '2021-04-09 21:42:54', 'Alfons', 'Merrel');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (104, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (104, 'uno', null,
         'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
         '2021-02-15 00:43:19', '2021-05-11 00:01:36', 'Barris', 'Thayne');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (6, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (6, 'uno', null,
         'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.',
         '2021-08-23 18:08:15', '2021-02-14 18:46:55', 'Chester', 'Raimund');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (23, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (23, 'uno', null,
         'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.',
         '2021-08-22 05:10:51', '2021-11-14 05:48:36', 'Gunner', 'Daryle');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (9, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (9, 'uno', null,
         'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.',
         '2021-07-08 21:49:32', '2021-10-16 05:19:59', 'Garey', 'Newton');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (61, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (61, 'uno', null,
         'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.',
         '2021-02-16 21:02:31', '2021-03-14 09:32:46', 'Pryce', 'Ruggiero');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (60, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (60, 'uno', null,
         'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.',
         '2021-07-01 14:11:02', '2022-01-05 14:35:41', 'Alphonse', 'Jimmie');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (66, 'uno', 'In congue. Etiam justo. Etiam pretium iaculis justo.', '2021-07-21 22:00:47', '2021-04-15 01:34:52',
-        'Francesco', 'Sigismond');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (110, 'uno', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (66, 'uno', null, 'In congue. Etiam justo. Etiam pretium iaculis justo.', '2021-07-21 22:00:47',
+        '2021-04-15 01:34:52', 'Francesco', 'Sigismond');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (110, 'uno', null,
+        'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.',
         '2022-01-20 13:04:44', '2021-07-23 13:46:46', 'Lee', 'Hillie');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (49, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (49, 'uno', null,
         'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.',
         '2021-08-17 22:15:55', '2021-08-14 18:08:06', 'Xerxes', 'Gavan');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (30, 'uno', 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (30, 'uno', null, 'Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.',
         '2022-01-01 09:01:26', '2021-02-05 06:06:11', 'Nilson', 'Abramo');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (66, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (66, 'uno', null,
         'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.',
         '2021-03-19 18:31:00', '2021-02-02 18:13:43', 'Efrem', 'Nappie');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (20, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (20, 'uno', null,
         'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.',
         '2021-08-10 09:50:08', '2021-06-10 09:21:44', 'Killy', 'Link');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (60, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (60, 'uno', null,
         'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.',
         '2021-07-01 11:17:44', '2021-06-12 14:47:11', 'Redd', 'Findlay');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (84, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (84, 'uno', null,
         'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.',
         '2021-11-20 19:24:29', '2021-07-09 22:30:51', 'Jermaine', 'Giordano');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (16, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (16, 'uno', null,
         'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.',
         '2021-03-31 15:02:53', '2022-01-27 10:41:22', 'Nevins', 'Tades');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (24, 'uno', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (24, 'uno', null, 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.',
         '2021-12-14 16:08:30', '2021-07-27 17:14:42', 'Ford', 'Bert');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (118, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (118, 'uno', null,
         'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.',
         '2021-04-06 13:22:24', '2021-03-22 21:55:23', 'Derward', 'Gilberto');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (80, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (80, 'uno', null,
         'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.',
         '2021-11-11 14:40:19', '2021-03-18 04:28:34', 'Raynard', 'Harmon');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (15, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (15, 'uno', null,
         'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.',
         '2021-08-03 10:39:41', '2021-10-10 14:36:42', 'Link', 'Herculie');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (53, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (53, 'uno', null,
         'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.',
         '2021-10-16 21:35:19', '2021-02-03 11:50:26', 'Bruno', 'Morry');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (116, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (116, 'uno', null,
         'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.',
         '2021-06-30 09:33:06', '2021-03-14 15:57:56', 'Ash', 'Kain');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (18, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (18, 'uno', null,
         'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.',
         '2021-12-17 04:35:08', '2021-12-03 02:48:23', 'Vance', 'Sherwood');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (39, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (39, 'uno', null,
         'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.',
         '2022-01-24 11:08:07', '2021-03-10 17:24:44', 'Alexio', 'Zak');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (36, 'uno', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', '2021-10-26 14:32:13',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (36, 'uno', null, 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', '2021-10-26 14:32:13',
         '2021-12-09 16:40:34', 'Gustavus', 'Dennis');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (95, 'uno', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (95, 'uno', null, 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.',
         '2022-01-04 18:07:58', '2021-06-09 11:32:21', 'Correy', 'Michale');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (83, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (83, 'uno', null,
         'Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.',
         '2021-08-26 19:21:23', '2021-08-18 00:16:06', 'Marsh', 'Jake');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (32, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (32, 'uno', null,
         'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.',
         '2021-04-06 03:33:13', '2021-02-08 18:06:28', 'Joey', 'Jeddy');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (97, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (97, 'uno', null,
         'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.',
         '2021-10-02 12:32:35', '2021-03-31 17:12:09', 'Ermin', 'Randy');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (101, 'uno', 'In congue. Etiam justo. Etiam pretium iaculis justo.', '2021-06-26 12:29:52',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (101, 'uno', null, 'In congue. Etiam justo. Etiam pretium iaculis justo.', '2021-06-26 12:29:52',
         '2021-01-29 02:54:16', 'Archer', 'Denney');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (109, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (109, 'uno', null,
         'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.',
         '2021-05-01 12:24:18', '2021-05-30 21:29:42', 'Fransisco', 'Francisco');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (93, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (93, 'uno', null,
         'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.',
         '2021-02-22 10:56:34', '2021-09-02 15:20:32', 'Georgy', 'Wells');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (118, 'uno',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (118, 'uno', null,
         'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.',
         '2021-11-04 07:35:10', '2021-12-24 13:17:12', 'Oates', 'Clayborne');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (97, 'uno', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (97, 'uno', null, 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.',
         '2021-07-18 10:42:20', '2021-12-25 13:59:02', 'Richmound', 'Wilmar');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (6, 'uno', 'Phasellus in felis. Donec semper sapien a libero. Nam dui.', '2021-02-08 10:45:24',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (6, 'uno', null, 'Phasellus in felis. Donec semper sapien a libero. Nam dui.', '2021-02-08 10:45:24',
         '2021-04-04 03:18:49', 'Rees', 'Kerk');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (106, 'uno', 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (106, 'uno', null, 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.',
         '2021-02-12 12:56:15', '2021-06-19 00:23:26', 'Kiley', 'Keenan');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (77, 'uno', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.',
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (77, 'uno', null, 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.',
         '2022-01-08 02:32:10', '2021-07-23 12:21:01', 'Harlen', 'Zacharia');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (56, 'uno', 'Sed ante. Vivamus tortor. Duis mattis egestas metus.', '2021-11-18 01:32:48', '2021-06-06 01:59:25',
-        'Vittorio', 'Milty');
-insert into article_comment (article_id, user_id, content, created_at, modified_at, created_by, modified_by)
-values (19, 'uno', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.', '2021-05-07 23:57:29',
-        '2021-04-03 21:55:11', 'Oliver', 'Graehme')
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (56, 'uno', null, 'Sed ante. Vivamus tortor. Duis mattis egestas metus.', '2021-11-18 01:32:48',
+        '2021-06-06 01:59:25', 'Vittorio', 'Milty');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (19, 'uno', null, 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.',
+        '2021-05-07 23:57:29', '2021-04-03 21:55:11', 'Oliver', 'Graehme')
 ;
 
-insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)values ('blue', now(), now(), 'uno', 'uno');
-insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)values ('crimson', now(), now(), 'uno', 'uno');
-insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)values ('fuscia', now(), now(), 'uno', 'uno');
-insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)values ('goldenrod', now(), now(), 'uno', 'uno');
-insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)values ('green', now(), now(), 'uno', 'uno');
-insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)values ('indigo', now(), now(), 'uno', 'uno');
-insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)values ('khaki', now(), now(), 'uno', 'uno');
-insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)values ('maroon', now(), now(), 'uno', 'uno');
-insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)values ('mauv', now(), now(), 'uno', 'uno');
-insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)values ('orange', now(), now(), 'uno', 'uno');
-insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)values ('pink', now(), now(), 'uno', 'uno');
-insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)values ('puce', now(), now(), 'uno', 'uno');
-insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)values ('purple', now(), now(), 'uno', 'uno');
-insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)values ('red', now(), now(), 'uno', 'uno');
-insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)values ('teal', now(), now(), 'uno', 'uno');
-insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)values ('turquoise', now(), now(), 'uno', 'uno');
-insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)values ('violet', now(), now(), 'uno', 'uno');
-insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)values ('yellow', now(), now(), 'uno', 'uno');
-insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)values ('white', now(), now(), 'uno', 'uno');
+-- 대댓글
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (49, 'uno', 1, '퍼가요~', '2021-03-02 22:40:04', '2021-04-27 15:38:09', 'Uno', 'Uno');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (49, 'uno2', 1, '퍼가요~', '2021-03-03 22:40:04', '2021-04-27 15:38:09', 'Uno2', 'Uno2');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (49, 'uno', 1, '또 퍼가요~', '2021-03-04 22:40:04', '2021-04-27 15:38:09', 'Uno', 'Uno');
+insert into article_comment (article_id, user_id, parent_comment_id, content, created_at, modified_at, created_by,
+                             modified_by)
+values (49, 'uno', 1, '또또 퍼가요~', '2021-03-05 22:40:04', '2021-04-27 15:38:09', 'Uno', 'Uno')
+;
 
-insert into article_hashtag (article_id, hashtag_id)values (1, 11);
-insert into article_hashtag (article_id, hashtag_id)values (2, 13);
-insert into article_hashtag (article_id, hashtag_id)values (3, 13);
-insert into article_hashtag (article_id, hashtag_id)values (4, 9);
-insert into article_hashtag (article_id, hashtag_id)values (5, 5);
-insert into article_hashtag (article_id, hashtag_id)values (6, 8);
-insert into article_hashtag (article_id, hashtag_id)values (7, 10);
-insert into article_hashtag (article_id, hashtag_id)values (8, 15);
-insert into article_hashtag (article_id, hashtag_id)values (9, 7);
-insert into article_hashtag (article_id, hashtag_id)values (10, 12);
-insert into article_hashtag (article_id, hashtag_id)values (11, 10);
-insert into article_hashtag (article_id, hashtag_id)values (12, 13);
-insert into article_hashtag (article_id, hashtag_id)values (13, 8);
-insert into article_hashtag (article_id, hashtag_id)values (15, 7);
-insert into article_hashtag (article_id, hashtag_id)values (18, 4);
-insert into article_hashtag (article_id, hashtag_id)values (19, 18);
-insert into article_hashtag (article_id, hashtag_id)values (20, 10);
-insert into article_hashtag (article_id, hashtag_id)values (21, 3);
-insert into article_hashtag (article_id, hashtag_id)values (22, 12);
-insert into article_hashtag (article_id, hashtag_id)values (24, 15);
-insert into article_hashtag (article_id, hashtag_id)values (25, 3);
-insert into article_hashtag (article_id, hashtag_id)values (26, 8);
-insert into article_hashtag (article_id, hashtag_id)values (27, 15);
-insert into article_hashtag (article_id, hashtag_id)values (28, 16);
-insert into article_hashtag (article_id, hashtag_id)values (29, 3);
-insert into article_hashtag (article_id, hashtag_id)values (31, 1);
-insert into article_hashtag (article_id, hashtag_id)values (32, 18);
-insert into article_hashtag (article_id, hashtag_id)values (33, 11);
-insert into article_hashtag (article_id, hashtag_id)values (34, 4);
-insert into article_hashtag (article_id, hashtag_id)values (35, 1);
-insert into article_hashtag (article_id, hashtag_id)values (37, 13);
-insert into article_hashtag (article_id, hashtag_id)values (38, 5);
-insert into article_hashtag (article_id, hashtag_id)values (40, 16);
-insert into article_hashtag (article_id, hashtag_id)values (42, 3);
-insert into article_hashtag (article_id, hashtag_id)values (43, 17);
-insert into article_hashtag (article_id, hashtag_id)values (45, 14);
-insert into article_hashtag (article_id, hashtag_id)values (45, 19);
-insert into article_hashtag (article_id, hashtag_id)values (47, 13);
-insert into article_hashtag (article_id, hashtag_id)values (48, 2);
-insert into article_hashtag (article_id, hashtag_id)values (49, 6);
-insert into article_hashtag (article_id, hashtag_id)values (50, 7);
-insert into article_hashtag (article_id, hashtag_id)values (52, 16);
-insert into article_hashtag (article_id, hashtag_id)values (54, 11);
-insert into article_hashtag (article_id, hashtag_id)values (55, 10);
-insert into article_hashtag (article_id, hashtag_id)values (57, 10);
-insert into article_hashtag (article_id, hashtag_id)values (58, 11);
-insert into article_hashtag (article_id, hashtag_id)values (59, 2);
-insert into article_hashtag (article_id, hashtag_id)values (60, 2);
-insert into article_hashtag (article_id, hashtag_id)values (61, 15);
-insert into article_hashtag (article_id, hashtag_id)values (63, 17);
-insert into article_hashtag (article_id, hashtag_id)values (64, 17);
-insert into article_hashtag (article_id, hashtag_id)values (65, 17);
-insert into article_hashtag (article_id, hashtag_id)values (66, 16);
-insert into article_hashtag (article_id, hashtag_id)values (67, 12);
-insert into article_hashtag (article_id, hashtag_id)values (68, 3);
-insert into article_hashtag (article_id, hashtag_id)values (70, 12);
-insert into article_hashtag (article_id, hashtag_id)values (71, 11);
-insert into article_hashtag (article_id, hashtag_id)values (72, 3);
-insert into article_hashtag (article_id, hashtag_id)values (73, 14);
-insert into article_hashtag (article_id, hashtag_id)values (75, 16);
-insert into article_hashtag (article_id, hashtag_id)values (76, 1);
-insert into article_hashtag (article_id, hashtag_id)values (77, 11);
-insert into article_hashtag (article_id, hashtag_id)values (80, 13);
-insert into article_hashtag (article_id, hashtag_id)values (81, 17);
-insert into article_hashtag (article_id, hashtag_id)values (82, 16);
-insert into article_hashtag (article_id, hashtag_id)values (83, 13);
-insert into article_hashtag (article_id, hashtag_id)values (84, 2);
-insert into article_hashtag (article_id, hashtag_id)values (85, 15);
-insert into article_hashtag (article_id, hashtag_id)values (86, 14);
-insert into article_hashtag (article_id, hashtag_id)values (88, 17);
-insert into article_hashtag (article_id, hashtag_id)values (90, 7);
-insert into article_hashtag (article_id, hashtag_id)values (91, 10);
-insert into article_hashtag (article_id, hashtag_id)values (92, 13);
-insert into article_hashtag (article_id, hashtag_id)values (93, 16);
-insert into article_hashtag (article_id, hashtag_id)values (94, 16);
-insert into article_hashtag (article_id, hashtag_id)values (95, 3);
-insert into article_hashtag (article_id, hashtag_id)values (96, 8);
-insert into article_hashtag (article_id, hashtag_id)values (97, 18);
-insert into article_hashtag (article_id, hashtag_id)values (98, 10);
-insert into article_hashtag (article_id, hashtag_id)values (99, 17);
-insert into article_hashtag (article_id, hashtag_id)values (100, 2);
-insert into article_hashtag (article_id, hashtag_id)values (102, 12);
-insert into article_hashtag (article_id, hashtag_id)values (103, 14);
-insert into article_hashtag (article_id, hashtag_id)values (104, 7);
-insert into article_hashtag (article_id, hashtag_id)values (105, 16);
-insert into article_hashtag (article_id, hashtag_id)values (106, 14);
-insert into article_hashtag (article_id, hashtag_id)values (107, 1);
-insert into article_hashtag (article_id, hashtag_id)values (111, 18);
-insert into article_hashtag (article_id, hashtag_id)values (112, 6);
-insert into article_hashtag (article_id, hashtag_id)values (113, 9);
-insert into article_hashtag (article_id, hashtag_id)values (114, 2);
-insert into article_hashtag (article_id, hashtag_id)values (116, 16);
-insert into article_hashtag (article_id, hashtag_id)values (117, 14);
-insert into article_hashtag (article_id, hashtag_id)values (119, 12);
-insert into article_hashtag (article_id, hashtag_id)values (120, 18);
-insert into article_hashtag (article_id, hashtag_id)values (122, 18)
+insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)
+values ('blue', now(), now(), 'uno', 'uno');
+insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)
+values ('crimson', now(), now(), 'uno', 'uno');
+insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)
+values ('fuscia', now(), now(), 'uno', 'uno');
+insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)
+values ('goldenrod', now(), now(), 'uno', 'uno');
+insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)
+values ('green', now(), now(), 'uno', 'uno');
+insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)
+values ('indigo', now(), now(), 'uno', 'uno');
+insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)
+values ('khaki', now(), now(), 'uno', 'uno');
+insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)
+values ('maroon', now(), now(), 'uno', 'uno');
+insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)
+values ('mauv', now(), now(), 'uno', 'uno');
+insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)
+values ('orange', now(), now(), 'uno', 'uno');
+insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)
+values ('pink', now(), now(), 'uno', 'uno');
+insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)
+values ('puce', now(), now(), 'uno', 'uno');
+insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)
+values ('purple', now(), now(), 'uno', 'uno');
+insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)
+values ('red', now(), now(), 'uno', 'uno');
+insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)
+values ('teal', now(), now(), 'uno', 'uno');
+insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)
+values ('turquoise', now(), now(), 'uno', 'uno');
+insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)
+values ('violet', now(), now(), 'uno', 'uno');
+insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)
+values ('yellow', now(), now(), 'uno', 'uno');
+insert into hashtag (hashtag_name, created_at, modified_at, created_by, modified_by)
+values ('white', now(), now(), 'uno', 'uno')
+;
+
+insert into article_hashtag (article_id, hashtag_id)
+values (1, 11);
+insert into article_hashtag (article_id, hashtag_id)
+values (2, 13);
+insert into article_hashtag (article_id, hashtag_id)
+values (3, 13);
+insert into article_hashtag (article_id, hashtag_id)
+values (4, 9);
+insert into article_hashtag (article_id, hashtag_id)
+values (5, 5);
+insert into article_hashtag (article_id, hashtag_id)
+values (6, 8);
+insert into article_hashtag (article_id, hashtag_id)
+values (7, 10);
+insert into article_hashtag (article_id, hashtag_id)
+values (8, 15);
+insert into article_hashtag (article_id, hashtag_id)
+values (9, 7);
+insert into article_hashtag (article_id, hashtag_id)
+values (10, 12);
+insert into article_hashtag (article_id, hashtag_id)
+values (11, 10);
+insert into article_hashtag (article_id, hashtag_id)
+values (12, 13);
+insert into article_hashtag (article_id, hashtag_id)
+values (13, 8);
+insert into article_hashtag (article_id, hashtag_id)
+values (15, 7);
+insert into article_hashtag (article_id, hashtag_id)
+values (18, 4);
+insert into article_hashtag (article_id, hashtag_id)
+values (19, 18);
+insert into article_hashtag (article_id, hashtag_id)
+values (20, 10);
+insert into article_hashtag (article_id, hashtag_id)
+values (21, 3);
+insert into article_hashtag (article_id, hashtag_id)
+values (22, 12);
+insert into article_hashtag (article_id, hashtag_id)
+values (24, 15);
+insert into article_hashtag (article_id, hashtag_id)
+values (25, 3);
+insert into article_hashtag (article_id, hashtag_id)
+values (26, 8);
+insert into article_hashtag (article_id, hashtag_id)
+values (27, 15);
+insert into article_hashtag (article_id, hashtag_id)
+values (28, 16);
+insert into article_hashtag (article_id, hashtag_id)
+values (29, 3);
+insert into article_hashtag (article_id, hashtag_id)
+values (31, 1);
+insert into article_hashtag (article_id, hashtag_id)
+values (32, 18);
+insert into article_hashtag (article_id, hashtag_id)
+values (33, 11);
+insert into article_hashtag (article_id, hashtag_id)
+values (34, 4);
+insert into article_hashtag (article_id, hashtag_id)
+values (35, 1);
+insert into article_hashtag (article_id, hashtag_id)
+values (37, 13);
+insert into article_hashtag (article_id, hashtag_id)
+values (38, 5);
+insert into article_hashtag (article_id, hashtag_id)
+values (40, 16);
+insert into article_hashtag (article_id, hashtag_id)
+values (42, 3);
+insert into article_hashtag (article_id, hashtag_id)
+values (43, 17);
+insert into article_hashtag (article_id, hashtag_id)
+values (45, 14);
+insert into article_hashtag (article_id, hashtag_id)
+values (45, 19);
+insert into article_hashtag (article_id, hashtag_id)
+values (47, 13);
+insert into article_hashtag (article_id, hashtag_id)
+values (48, 2);
+insert into article_hashtag (article_id, hashtag_id)
+values (49, 6);
+insert into article_hashtag (article_id, hashtag_id)
+values (50, 7);
+insert into article_hashtag (article_id, hashtag_id)
+values (52, 16);
+insert into article_hashtag (article_id, hashtag_id)
+values (54, 11);
+insert into article_hashtag (article_id, hashtag_id)
+values (55, 10);
+insert into article_hashtag (article_id, hashtag_id)
+values (57, 10);
+insert into article_hashtag (article_id, hashtag_id)
+values (58, 11);
+insert into article_hashtag (article_id, hashtag_id)
+values (59, 2);
+insert into article_hashtag (article_id, hashtag_id)
+values (60, 2);
+insert into article_hashtag (article_id, hashtag_id)
+values (61, 15);
+insert into article_hashtag (article_id, hashtag_id)
+values (63, 17);
+insert into article_hashtag (article_id, hashtag_id)
+values (64, 17);
+insert into article_hashtag (article_id, hashtag_id)
+values (65, 17);
+insert into article_hashtag (article_id, hashtag_id)
+values (66, 16);
+insert into article_hashtag (article_id, hashtag_id)
+values (67, 12);
+insert into article_hashtag (article_id, hashtag_id)
+values (68, 3);
+insert into article_hashtag (article_id, hashtag_id)
+values (70, 12);
+insert into article_hashtag (article_id, hashtag_id)
+values (71, 11);
+insert into article_hashtag (article_id, hashtag_id)
+values (72, 3);
+insert into article_hashtag (article_id, hashtag_id)
+values (73, 14);
+insert into article_hashtag (article_id, hashtag_id)
+values (75, 16);
+insert into article_hashtag (article_id, hashtag_id)
+values (76, 1);
+insert into article_hashtag (article_id, hashtag_id)
+values (77, 11);
+insert into article_hashtag (article_id, hashtag_id)
+values (80, 13);
+insert into article_hashtag (article_id, hashtag_id)
+values (81, 17);
+insert into article_hashtag (article_id, hashtag_id)
+values (82, 16);
+insert into article_hashtag (article_id, hashtag_id)
+values (83, 13);
+insert into article_hashtag (article_id, hashtag_id)
+values (84, 2);
+insert into article_hashtag (article_id, hashtag_id)
+values (85, 15);
+insert into article_hashtag (article_id, hashtag_id)
+values (86, 14);
+insert into article_hashtag (article_id, hashtag_id)
+values (88, 17);
+insert into article_hashtag (article_id, hashtag_id)
+values (90, 7);
+insert into article_hashtag (article_id, hashtag_id)
+values (91, 10);
+insert into article_hashtag (article_id, hashtag_id)
+values (92, 13);
+insert into article_hashtag (article_id, hashtag_id)
+values (93, 16);
+insert into article_hashtag (article_id, hashtag_id)
+values (94, 16);
+insert into article_hashtag (article_id, hashtag_id)
+values (95, 3);
+insert into article_hashtag (article_id, hashtag_id)
+values (96, 8);
+insert into article_hashtag (article_id, hashtag_id)
+values (97, 18);
+insert into article_hashtag (article_id, hashtag_id)
+values (98, 10);
+insert into article_hashtag (article_id, hashtag_id)
+values (99, 17);
+insert into article_hashtag (article_id, hashtag_id)
+values (100, 2);
+insert into article_hashtag (article_id, hashtag_id)
+values (102, 12);
+insert into article_hashtag (article_id, hashtag_id)
+values (103, 14);
+insert into article_hashtag (article_id, hashtag_id)
+values (104, 7);
+insert into article_hashtag (article_id, hashtag_id)
+values (105, 16);
+insert into article_hashtag (article_id, hashtag_id)
+values (106, 14);
+insert into article_hashtag (article_id, hashtag_id)
+values (107, 1);
+insert into article_hashtag (article_id, hashtag_id)
+values (111, 18);
+insert into article_hashtag (article_id, hashtag_id)
+values (112, 6);
+insert into article_hashtag (article_id, hashtag_id)
+values (113, 9);
+insert into article_hashtag (article_id, hashtag_id)
+values (114, 2);
+insert into article_hashtag (article_id, hashtag_id)
+values (116, 16);
+insert into article_hashtag (article_id, hashtag_id)
+values (117, 14);
+insert into article_hashtag (article_id, hashtag_id)
+values (119, 12);
+insert into article_hashtag (article_id, hashtag_id)
+values (120, 18);
+insert into article_hashtag (article_id, hashtag_id)
+values (122, 18)
 ;
