@@ -15,8 +15,7 @@ import java.util.Set;
         @Index(columnList = "content"),
         @Index(columnList = "createdAt"),
         @Index(columnList = "createdBy")
-}) // 위의 인덱스로 빠른 서칭 가능하도록 함.
-//@EntityListeners(AuditingEntityListener.class)
+})
 @Entity
 public class ArticleComment extends AuditingFields {
 
@@ -29,8 +28,8 @@ public class ArticleComment extends AuditingFields {
     private Article article; // 게시글 (ID)
 
     @Setter
-    @ManyToOne(optional = false)
     @JoinColumn(name = "userId")
+    @ManyToOne(optional = false)
     private UserAccount userAccount; // 유저 정보 (ID)
 
     @Setter
@@ -42,22 +41,9 @@ public class ArticleComment extends AuditingFields {
     @OneToMany(mappedBy = "parentCommentId", cascade = CascadeType.ALL)
     private Set<ArticleComment> childComments = new LinkedHashSet<>();
 
-    @Setter
-    @Column(nullable = false, length = 500)
-    private String content; // 본문
+    @Setter @Column(nullable = false, length = 500) private String content; // 본문
 
-    @Setter
-    @Column(updatable = false)
-    private Long parentCommentId; // 부모 댓글ID
-
-    @ToString.Exclude
-    @OrderBy("createdAt ASC")
-    @OneToMany(mappedBy = "parentCommentId", cascade= CascadeType.ALL)
-    private Set<ArticleComment> childComments = new LinkedHashSet<>(); // JPA 에서는 final 선언을 하지 않도록 권고
-
-
-    protected ArticleComment() {
-    }
+    protected ArticleComment() {}
 
     private ArticleComment(Article article, UserAccount userAccount, Long parentCommentId, String content) {
         this.article = article;
@@ -79,11 +65,12 @@ public class ArticleComment extends AuditingFields {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof ArticleComment that)) return false;
-        return id != null && id.equals(that.getId());
+        return this.getId() != null && this.getId().equals(that.getId());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(this.getId());
     }
+
 }

@@ -2,7 +2,6 @@ package com.fc.projectboard.dto.response;
 
 import com.fc.projectboard.dto.ArticleCommentDto;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Comparator;
 import java.util.Set;
@@ -16,42 +15,18 @@ public record ArticleCommentResponse(
         String nickname,
         String userId,
         Long parentCommentId,
-        Set<ArticleCommentResponse> childComments) implements Serializable {
+        Set<ArticleCommentResponse> childComments
+) {
 
-    public static ArticleCommentResponse of(Long id,
-                                            String content,
-                                            LocalDateTime createdAt,
-                                            String email,
-                                            String nickname,
-                                            String userId) {
-        return ArticleCommentResponse.of(id,
-                content,
-                createdAt,
-                email,
-                nickname,
-                userId,
-                null);
+    public static ArticleCommentResponse of(Long id, String content, LocalDateTime createdAt, String email, String nickname, String userId) {
+        return ArticleCommentResponse.of(id, content, createdAt, email, nickname, userId, null);
     }
 
-    public static ArticleCommentResponse of(Long id,
-                                            String content,
-                                            LocalDateTime createdAt,
-                                            String email,
-                                            String nickname,
-                                            String userId,
-                                            Long parentCommentId) {
+    public static ArticleCommentResponse of(Long id, String content, LocalDateTime createdAt, String email, String nickname, String userId, Long parentCommentId) {
         Comparator<ArticleCommentResponse> childCommentComparator = Comparator
-                .comparing(ArticleCommentResponse::id)
+                .comparing(ArticleCommentResponse::createdAt)
                 .thenComparingLong(ArticleCommentResponse::id);
-
-        return new ArticleCommentResponse(id,
-                content,
-                createdAt,
-                email,
-                nickname,
-                userId,
-                parentCommentId,
-                new TreeSet<>(childCommentComparator));
+        return new ArticleCommentResponse(id, content, createdAt, email, nickname, userId, parentCommentId, new TreeSet<>(childCommentComparator));
     }
 
     public static ArticleCommentResponse from(ArticleCommentDto dto) {
@@ -74,4 +49,5 @@ public record ArticleCommentResponse(
     public boolean hasParentComment() {
         return parentCommentId != null;
     }
+
 }

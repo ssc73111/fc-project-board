@@ -11,51 +11,44 @@ import java.util.Objects;
 import java.util.Set;
 
 @Getter
-@ToString(callSuper = true) // super Class 까지 들어가서 toString 찍는다는 설정
+@ToString(callSuper = true)
 @Table(indexes = {
         @Index(columnList = "title"),
         @Index(columnList = "createdAt"),
         @Index(columnList = "createdBy")
-}) // 위의 인덱스로 빠른 서칭 가능하도 록 함.
-//@EntityListeners(AuditingEntityListener.class)
+})
 @Entity
 public class Article extends AuditingFields {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id; // 자동으로 부여하는 값으로 사용자가 수정 하지 못하도록 한다. (JPA Persistence Context 가 영속화를 할때 자동으로 부여해주는 고유번호)
+    private Long id;
 
     @Setter
-    @ManyToOne(optional = false)
     @JoinColumn(name = "userId")
+    @ManyToOne(optional = false)
     private UserAccount userAccount; // 유저 정보 (ID)
 
-    @Setter
-    @Column(nullable = false)
-    private String title; // 제목
+    @Setter @Column(nullable = false) private String title; // 제목
+    @Setter @Column(nullable = false, length = 10000) private String content; // 본문
 
-    @Setter
-    @Column(nullable = false, length = 10000)
-    private String content; // 본문
-
-    // 옵셔널 -> Hashtag.class 으로 이동
-//    @Setter
-//    private String hashtag; // 해시태그
-
+    @ToString.Exclude
     @JoinTable(
             name = "article_hashtag",
             joinColumns = @JoinColumn(name = "articleId"),
             inverseJoinColumns = @JoinColumn(name = "hashtagId")
     )
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}) // insert or merge 할때 동기화
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private Set<Hashtag> hashtags = new LinkedHashSet<>();
 
-    @OrderBy("createdAt DESC") // 시간순정렬
-    @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
-    @ToString.Exclude // cascade 결합도가 높기 때문에(양방향 바인딩), 운영시 키 설정 하지 않는다. (순환참조때문에, toString 을 모든 인스턴스에서 실행하기 때문에
-    private final Set<ArticleComment> articleCommentSet = new LinkedHashSet<>();
 
-    protected Article() {
-    }
+    @ToString.Exclude
+    @OrderBy("createdAt DESC")
+    @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
+    private final Set<ArticleComment> articleComments = new LinkedHashSet<>();
+
+
+    protected Article() {}
 
     private Article(UserAccount userAccount, String title, String content) {
         this.userAccount = userAccount;
@@ -82,12 +75,13 @@ public class Article extends AuditingFields {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Article article)) return false;
-        return id != null && id.equals(article.getId());
+        if (!(o instanceof Article that)) return false;
+        return this.getId() != null && this.getId().equals(that.getId());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(this.getId());
     }
+
 }
