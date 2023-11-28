@@ -4,6 +4,8 @@
 2022년 6월 스프링 부트 기술, 자바 17 개발 도구들을 경험하도록 된 강의.
 이 서비스는 [패스트캠퍼스](https://fastcampus.co.kr/)의 [10개 프로젝트로 완성하는 백엔드 웹개발(Java/Spring) 초격차 패키지 Online](https://fastcampus.co.kr/dev_online_befinal) 강의의 강의용 프로젝트로 사용되었습니다.
 
+- https://port-0-fc-project-board-3szcb0g2blp0vtt14.sel5.cloudtype.app/
+
 ## 개발 환경
 
 * Intellij IDEA Ultimate 2022.1.1 ~ 2022.1.3
