@@ -35,7 +35,7 @@ dependencies {
     implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
     implementation 'org.springdoc:springdoc-openapi-ui:1.7.0'
     implementation 'org.springdoc:springdoc-openapi-data-rest:1.7.0'
-    annotationProcessor 'ocom.github.therapi:therapi-runtime-javadoc-scribe:0.15.0'
+    annotationProcessor 'com.github.therapi:therapi-runtime-javadoc-scribe:0.15.0'
 
 //    implementation 'org.springframework.cloud:spring-cloud-starter-vault-config:3.1.1' //Vault 서버를 클라우드에 구성해야 하므로, 이 작업은 반영하지 않기로 한다.
 
