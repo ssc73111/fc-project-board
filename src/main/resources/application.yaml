@@ -8,20 +8,18 @@ management:
 logging:
   level:
     com.fc.projectboard: debug
-    org.springframework.web.servlet: debug # ? ?? ??/?? ??
-    org.hibernate.type.descriptor.sql.BasicBinder: trace # ?? ?? ? ? ??
+    org.springframework.web.servlet: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
 
-spring:
-#  application:
-#    name: fc-board
-  datasource:
-    url: ${LOCAL_DB_URL} #jdbc:postgresql://localhost:5432/board
-    username: ${LOCAL_DB_USERNAME}
-    password: ${LOCAL_DB_PASSWORD}
 #    driver-class-name: com.mysql.cj.jdbc.Driver // 자동으로 세팅 해준다.
 #      url: jdbc:h2:mem:testdb
 #      username: sa
 #      driver-class-name: org.h2.Driver
+spring:
+  datasource:
+    url: ${LOCAL_DB_URL} #jdbc:postgresql://localhost:5432/board
+    username: ${LOCAL_DB_USERNAME}
+    password: ${LOCAL_DB_PASSWORD}
   jpa:
     defer-datasource-initialization: true
     hibernate:
@@ -61,7 +59,7 @@ spring:
             token-uri: https://kauth.kakao.com/oauth/token
             user-info-uri: https://kapi.kakao.com/v2/user/me
             user-name-attribute: id
-  # cmd: vault server -dev 명령 후 실행해야한다.
+# : vault server -dev 명령 후 실행해야한다.
 #  cloud:
 #    vault:
 #      scheme: http
@@ -81,6 +79,15 @@ spring:
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
     driver-class-name: org.mariadb.jdbc.Driver
+
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+  datasource:
+    url: jdbc:h2:mem:testdb
+
 #spring:
 #  config:
 #    activate:
@@ -94,11 +101,3 @@ spring:
 #    test:
 #      database:
 #        replace: none
-
----
-spring:
-  config:
-    activate:
-      on-profile: test
-  datasource:
-    url: jdbc:h2:mem:testdb
